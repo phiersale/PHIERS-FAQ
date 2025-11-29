@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHIERS FAQ - Deep Dive Knowledge Base</title>
+    <meta name="description" content="Comprehensive FAQ about PHIERS - the movement giving economic TEETH to demands of We the People through $2.73T in savings, 3.5% leverage, and forced Congressional accountability.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            padding: 10px;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.98);
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .logo {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .logo img {
+            max-width: 250px;
+            height: auto;
+        }
+
+        nav {
+            background: rgba(45, 55, 72, 0.95);
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 10px 20px;
+            margin: 5px;
+            display: inline-block;
+            border-radius: 8px;
+            transition: background 0.3s;
+        }
+
+        nav a:hover {
+            background: rgba(102, 126, 234, 0.8);
+        }
+        
+        .header {
+            text-align: center;
+            padding: 20px 10px;
+            border-bottom: 3px solid #667eea;
+            margin-bottom: 30px;
+        }
+        
+        .header h1 {
+            color: #667eea;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .tagline {
+            font-size: 1.3em;
+            color: #2d3748;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .mission-box {
+            background: linear-gradient(135deg, #4CAF50 0%, #2E7D32 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 12px;
+            margin: 30px 0;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .mission-box h2 {
+            color: #FFD700;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2rem;
+        }
+
+        .mission-box p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+        
+        .faq-item {
+            background: #f8f9fa;
+            border-left: 4px solid #667eea;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .question {
+            background: #667eea;
+            color: white;
+            padding: 15px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            cursor: pointer;
+            user-select: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .question::after {
+            content: "▼";
+            transition: transform 0.3s ease;
+            font-size: 0.9em;
+        }
+        
+        .faq-item.collapsed .question::after {
+            transform: rotate(-90deg);
+        }
+        
+        .answer {
+            padding: 20px;
+            display: block;
+            font-size: 1rem;
+            line-height: 1.8;
+        }
+        
+        .faq-item.collapsed .answer {
+            display: none;
+        }
+        
+        .highlight {
+            background: #e8f5e8;
+            border-left: 3px solid #27ae60;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+        
+        .crisis-box {
+            background: #fff3cd;
+            border-left: 3px solid #ffc107;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+        
+        .power-box {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 15px 0;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .math-box {
+            background: #f0f4ff;
+            border: 3px solid #667eea;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 8px;
+        }
+
+        .math-box h4 {
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+        
+        .cta-button {
+            display: block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 18px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 8px;
+            margin: 25px 0;
+            font-weight: bold;
+            font-size: 1.2rem;
+            transition: transform 0.3s;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+        }
+        
+        ul {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+        
+        li {
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 { font-size: 2em; }
+            .tagline { font-size: 1.1em; }
+            .question { font-size: 1rem; padding: 12px; }
+            nav a { display: block; margin: 5px 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="http://phiers.org/wp-content/uploads/2024/04/PHIERS-Logo-TRANS-So-So-300x225.png" alt="PHIERS Logo">
+        </div>
+
+        <nav>
+            <a href="https://phiersale.github.io/PHIERStorm/">🔥 Political Action HQ</a>
+            <a href="https://phiersale.github.io/phiers-Tgiving/">💚 Mutual Aid Solutions</a>
+            <a href="#mission">📜 Mission Statement</a>
+        </nav>
+
+        <div class="header">
+            <h1>🔍 PHIERS FAQ</h1>
+            <div class="tagline">Deep Dive Knowledge Base</div>
+            <p style="font-size: 1.1rem; color: #4a5568; margin-top: 10px;">Everything you need to know about the movement giving economic TEETH to We the People</p>
+        </div>
+
+        <div class="mission-box" id="mission">
+            <h2>⭐ OUR MISSION</h2>
+            <p>We are building a movement that gives economic TEETH to the demands of We the People.</p>
+            <p>While politicians fight amongst themselves and corporations extract wealth from working families, PHIERS creates the cooperative infrastructure that makes healthcare affordable, creates AI-resistant jobs, and forces Congressional accountability through mathematical leverage—not moral appeals.</p>
+            <p><strong>Our Foundation:</strong> Replace $7,000/year insurance (that 80% don't need) with $600/year telehealth. Every $50 saved on prescriptions sponsors another person into coverage. This cascade generates $2.73 TRILLION annually—enough to provide universal coverage, create 5-10 million jobs, and fund the safety net America deserves.</p>
+            <p><strong>Our Power:</strong> At 3.5% of the population per district, we achieve unstoppable political leverage. Through our petition and survey system, we document what voters demand, track Congressional responses, and replace politicians who refuse to serve constituents over corporate donors.</p>
+            <p><strong>Our Strategy:</strong> We're not asking permission. We're building economic alternatives that work NOW—Mark Cuban Cost Plus Drug Company operational, ZORTT Elite Medical proven, cooperative purchasing power growing daily. When 3.5% of your district joins, your representative faces a simple choice: adopt our solutions, show us something better, or be replaced by candidates committed to voter demands.</p>
+            <p><strong>Our Vision:</strong> An America where healthcare is a right funded by efficiency, not taxation. Where jobs require human touch that AI can't replicate. Where 175 million Americans coordinate virtually to wield $850+ billion in annual leverage. Where politicians serve constituents because refusing becomes economically impossible.</p>
+            <p style="font-size: 1.3rem; color: #FFD700; margin-top: 20px; text-align: center;"><strong>We're THOUGHT LEADERS spreading transformative ideas. We're MOVEMENT BUILDERS creating infrastructure for change. We're EARLY ADOPTERS proving cooperative economics works at scale.</strong></p>
+            <p style="font-size: 1.2rem; text-align: center; margin-top: 15px;">Join us. The movement needs YOU.</p>
+        </div>
+
+        <div class="faq-item collapsed">
+            <div class="question">💡 What is PHIERS and why does it matter NOW?</div>
+            <div class="answer">
+                <p><strong>PHIERS = The People's Health Insurance Endowment and Referral Service</strong></p>
+                <p>We're a MOVEMENT (not a business) creating cooperative economic infrastructure that:</p>
+                <ul>
+                    <li>Makes healthcare actually affordable through $2.73T in annual savings</li>
+                    <li>Creates 5-10 million AI-resistant jobs that can't be automated</li>
+                    <li>Forces Congressional accountability through mathematical leverage at 3.5%</li>
+                </ul>
+                <div class="crisis-box">
+                    <strong>Why NOW matters:</strong>
+                    <ul>
+                        <li>ACA premiums DOUBLING ($888 → $1,904/year in 2026)</li>
+                        <li>52% of families can't afford basic living costs</li>
+                        <li>MAGA Republicans splitting while Trump approval tanks (36% economy, 28% inflation)</li>
+                        <li>Democrats offer band-aids, not solutions</li>
+                        <li>Open enrollment season = Representatives MUST act NOW</li>
+                    </ul>
+                </div>
+                <p><strong>PHIERS gives voters LEVERAGE they've never had before: economic consequences for politicians who refuse to serve constituents.</strong></p>
+            </div>
+        </div>
+
+        <div class="faq-item collapsed">
+            <div class="question">🔢 How does the AI-validated savings cascade work?</div>
+            <div class="answer">
+                <p><strong>The concept is simple—the math is unstoppable:</strong></p>
+                <div class="math-box">
+                    <h4>Step 1: Individual switches to telehealth</h4>
+                    <p>• Was paying: $7,000/year for insurance they don't need (80% never use hospitalization/specialty care)</p>
+                    <p>• Now pays: $600/year for telehealth ($50/month)</p>
+                    <p>• Savings: $6,400 per person annually</p>
+                </div>
+
+                <div class="math-box">
+                    <h4>Step 2: Prescription savings sponsor telehealth</h4>
+                    <p>• For every $50 saved buying medications through Mark Cuban Cost Plus Drug Company (80-90% discounts), PHIERS sponsors ONE person into telehealth</p>
+                    <p>• Example: Person saves $200/month on prescriptions = sponsors 4 people into telehealth</p>
+                    <p>• Those 4 people each save $6,400/year = $25,600 in new savings</p>
+                </div>
+
+                <div class="math-box">
+                    <h4>Step 3: Positive reinforcement cascade</h4>
+                    <p>• $25,600 in savings sponsors 512 MORE people into telehealth ($25,600 ÷ $50)</p>
+                    <p>• Those 512 people generate $3.27 MILLION in annual savings</p>
+                    <p>• $3.27M sponsors 65,400 MORE people</p>
+                    <p>• <strong>This cascade continues exponentially</strong></p>
+                </div>
+
+                <div class="power-box">
+                    AT SCALE (175M Americans):<br>
+                    $2.73 TRILLION in annual savings<br>
+                    Enough to fund universal coverage + 5-10M jobs + safety net + universal basic income
+                </div>
+
+                <div class="highlight">
+                    <strong>AI Validation:</strong> We ran this exact scenario through Claude AI. The math is sound. Every new person creates a positive feedback loop that accelerates adoption. This is WHY it's self-sustaining and why politicians can't stop it once we reach 3.5%.
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-item collapsed">
+            <div class="question">📊 What is the Petition + Survey system and how does it create leverage?</div>
+            <div class="answer">
+                <p><strong>Two-step accountability mechanism that forces Congressional action:</strong></p>
+                
+                <div class="power-box">
+                    STEP 1: PETITION<br>
+                    Sign demand that YOUR representative support PHIERS solutions<br>
+                    Backed by $1.95+ BILLION per district in savings leverage<br>
+                    At 3.5% of district population = unstoppable force
+                </div>
+
+                <div class="power-box">
+                    STEP 2: SURVEY<br>
+                    Tell YOUR representative YOUR top priorities<br>
+                    State what you EXPECT if they want your vote<br>
+                    Publicly tracked responses create accountability<br>
+                    Replace politicians who refuse voter demands
+                </div>
+
+                <div class="highlight">
+                    <strong>How the Survey Creates Power:</strong>
+                    <ul>
+                        <li><strong>Document demands:</strong> What do 3.5% of voters in your district actually want?</li>
+                        <li><strong>Track responses:</strong> Public database shows which representatives listen vs ignore</li>
+                        <li><strong>Force compliance:</strong> Politicians who ignore 3.5% face primary challenges funded by cooperative savings</li>
+                        <li><strong>Replace resisters:</strong> Special elections bring in candidates COMMITTED to voter demands</li>
+                    </ul>
+                </div>
+
+                <div class="math-box">
+                    <h4>The Math That Makes This Work:</h4>
+                    <p><strong>Corporate pharma lobbying:</strong> $3.7B spread across ALL 435 districts = ~$8.5M per district</p>
+                    <p><strong>PHIERS leverage PER district:</strong> $1.95B minimum</p>
+                    <p><strong>Our advantage:</strong> 230:1 ratio minimum</p>
+                    <p style="margin-top: 15px;"><strong>Translation:</strong> We can outspend corporate lobbying 230x over in EVERY district. Politicians serve whoever pays more. Now that's US.</p>
+                </div>
+
+                <p><strong>The survey articulates the people's DEMANDS. The petition provides the LEVERAGE. Together they force compliance or replacement.</strong></p>
+            </div>
+        </div>
+
+        <div class="faq-item collapsed">
+            <div class="question">⚡ What is the 3.5% Rule and why is it unstoppable?</div>
+            <div class="answer">
+                <p><strong>Research by Erica Chenoweth (Harvard) proves: When 3.5% of a population mobilizes around clear goals with economic backing, policy change becomes inevitable.</strong></p>
+                
+                <div class="highlight">
+                    <strong>Historical Examples:</strong>
+                    <ul>
+                        <li>Civil Rights Movement: ~3.5% active participation → Civil Rights Act</li>
+                        <li>Indian Independence: 3.5% sustained action → British withdrawal</li>
+                        <li>Velvet Revolution: 3.5% coordination → peaceful government change</li>
+                    </ul>
+                </div>
+
+                <div class="power-box">
+                    PHIERS AT 3.5% OF DISTRICT = UNSTOPPABLE BECAUSE:<br><br>
+                    ✓ Mathematical leverage ($1.95B+ per district)<br>
+                    ✓ Documented voter demands (survey)<br>
+                    ✓ Economic consequences (primary funding)<br>
+                    ✓ Replacement infrastructure (committed candidates)<br>
+                    ✓ FREE healthcare for members (self-interest alignment)
+                </div>
+
+                <div class="math-box">
+                    <h4>What Happens at 3.5%:</h4>
+                    <p><strong>Your Representative's Choice:</strong></p>
+                    <ol>
+                        <li><strong>Adopt PHIERS solutions</strong> (save constituents $1.95B+, create thousands of jobs, deliver FREE healthcare)</li>
+                        <li><strong>Show something better</strong> (we're open to alternatives that exceed our results)</li>
+                        <li><strong>Explain why they're blocking it</strong> (and face primary challenge funded by cooperative + special election with replacement committed to voter demands)</li>
+                    </ol>
+                </div>
+
+                <p style="margin-top: 20px;"><strong>CRITICAL: We're at 53% of the 3.5% threshold nationally. That's 15X the proven success rate. This isn't hopeful—it's mathematical inevitability.</strong></p>
+            </div>
+        </div>
+
+        <div class="faq-item collapsed">
+            <div class="question">🤖 How does PHIERS address the AI Job Apocalypse?</div>
+            <div class="answer">
+                <div class="crisis-box">
+                    <strong>The Crisis NOBODY Else Is Solving:</strong>
+                    <ul>
+                        <li><strong>50% of white-collar entry-level jobs ELIMINATED by 2027</strong></li>
+                        <li>Customer service, data entry, basic analysis, admin support—GONE</li>
+                        <li>No career ladder, no training pipeline, no safety net</li>
+                        <li>Republicans: No plan (just more tariffs that raise prices)</li>
+                        <li>Democrats: Talk about "wanting to help" (zero action)</li>
+                    </ul>
+                </div>
+
+                <div class="highlight">
+                    <strong>PHIERWorks: 5-10 Million AI-RESISTANT Jobs</strong>
+                    <p>Positions requiring human touch that AI CANNOT replicate:</p>
+                    <ul>
+                        <li><strong>Home health aides ($18-28/hr):</strong> Requires physical care + empathy</li>
+                        <li><strong>Community health workers ($20-30/hr):</strong> Requires local trust + knowledge</li>
+                        <li><strong>Elder companions ($18-25/hr):</strong> Requires emotional connection</li>
+                        <li><strong>Child/adult daycare ($16-24/hr):</strong> Requires patience + interaction</li>
+                        <li><strong>Infrastructure maintenance ($22-35/hr):</strong> Requires hands-on skill</li>
+                        <li><strong>Food distribution coordinators ($18-26/hr):</strong> Requires community understanding</li>
+                        <li><strong>Home repair specialists ($25-40/hr):</strong> Requires physical presence</li>
+                    </ul>
+                    <p><strong>All positions include full benefits, funded 100% from healthcare savings. These careers STRENGTHEN as automation eliminates traditional jobs.</strong></p>
+                </div>
+
+                <div class="power-box">
+                    WHILE OTHERS PANIC ABOUT AI DISPLACEMENT,<br>
+                    WE'RE BUILDING THE POST-AI ECONOMY RIGHT NOW
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-item collapsed">
+            <div class="question">💰 DOGE vs PHIERS - What's the Real Comparison?</div>
+            <div class="answer">
+                <p><strong>Trump promised $2 trillion in savings over 10 YEARS through DOGE (chaos, layoffs, broken services).</strong></p>
+                <p><strong>PHIERS delivers $2.7 TRILLION ANNUALLY through cooperation.</strong></p>
+
+                <div class="math-box">
+                    <h4>The Math:</h4>
+                    <p>• DOGE: $2T ÷ 10 years = $200B per year</p>
+                    <p>• PHIERS: $2.73T per year</p>
+                    <p>• <strong>PHIERS advantage: 13.5X more PER YEAR</strong></p>
+                    <p>• Over 10 years: $27.3T vs $2T (PHIERS delivers 13.6X more)</p>
+                </div>
+
+                <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
+                    <thead>
+                        <tr style="background: #667eea; color: white;">
+                            <th style="padding: 12px; border: 1px solid #ddd;">Goal</th>
+                            <th style="padding: 12px; border: 1px solid #ddd;">DOGE</th>
+                            <th style="padding: 12px; border: 1px solid #ddd;">PHIERS</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="padding: 10px; border: 1px solid #ddd;"><strong>Savings</strong></td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">$2T over 10 years</td>
+                            <td style="padding: 10px; border: 1px solid #ddd; background: #e8f5e8;"><strong>$2.73T EVERY year</strong></td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px; border: 1px solid #ddd;"><strong>Healthcare</strong></td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">No solution (costs rising)</td>
+                            <td style="padding: 10px; border: 1px solid #ddd; background: #e8f5e8;"><strong>FREE at 3.5%</strong></td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px; border: 1px solid #ddd;"><strong>Jobs</strong></td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">Massive layoffs</td>
+                            <td style="padding: 10px; border: 1px solid #ddd; background: #e8f5e8;"><strong>5-10M AI-resistant jobs</strong></td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px; border: 1px solid #ddd;"><strong>AI Crisis</strong></td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">Ignored</td>
+                            <td style="padding: 10px; border: 1px solid #ddd; background: #e8f5e8;"><strong>Employment infrastructure ready</strong></td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px; border: 1px solid #ddd;"><strong>New Taxes</strong></td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">Claims none (services lost)</td>
+                            <td style="padding: 10px; border: 1px solid #ddd; background: #e8f5e8;"><strong>Zero (100% self-funding)</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="highlight">
+                    <strong>Bottom Line:</strong> DOGE creates chaos. PHIERS creates solutions. DOGE promises savings someday. PHIERS delivers savings NOW. DOGE has no healthcare plan. PHIERS provides FREE coverage. DOGE eliminates jobs. PHIERS creates millions.
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-item collapsed">
+            <div class="question">🍽️ How does PHIERS address Medicaid work requirements and SNAP benefits?</div>
+            <div class="answer">
+                <div class="crisis-box">
+                    <strong>New Requirements Crushing Families:</strong>
+                    <ul>
+                        <li>80-hour/month work requirements for SNAP (food stamps)</li>
+                        <li>Medicaid work requirements expanding in red states</li>
+                        <li>No jobs available that pay living wages</li>
+                        <li>Benefits cut off → families go hungry</li>
+                    </ul>
+                </div>
+
+                <div class="highlight">
+                    <strong>PHIERS Three-Part Solution:</strong>
+                    
+                    <p><strong>1. PHIERWorks jobs automatically satisfy requirements</strong></p>
+                    <ul>
+                        <li>All positions qualify for work hour requirements</li>
+                        <li>Pay living wages ($18-35/hr with benefits)</li>
+                        <li>No need to choose between work and keeping benefits</li>
+                    </ul>
+
+                    <p style="margin-top: 15px;"><strong>2. Healthcare savings cover SNAP costs</strong></p>
+                    <ul>
+                        <li>$2.73T annual savings >> $127B SNAP budget</li>
+                        <li>Can maintain food assistance PLUS create jobs</li>
+                        <li>Self-funding model means benefits aren't budget-dependent</li>
+                    </ul>
+
+                    <p style="margin-top: 15px;"><strong>3. Universal Basic Income for all members (future)</strong></p>
+                    <ul>
+                        <li>Once scaled, savings sufficient for UBI</li>
+                        <li>Eliminates need for means-tested programs</li>
+                        <li>Provides economic security regardless of employment</li>
+                    </ul>
+                </div>
+
+                <div class="power-box">
+                    PHIERS doesn't fight the requirements—<br>
+                    We CREATE the jobs AND the income<br>
+                    that make requirements irrelevant
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-item collapsed">
+            <div class="question">📱 What is the "Everything App" vision?</div>
+            <div class="answer">
+                <p><strong>Long-term vision for early adopters—coming AFTER we're scaled:</strong></p>
+
+                <div class="highlight">
+                    <strong>Integrated Platform Combining:</strong>
+                    <ul>
+                        <li><strong>Case management tool:</strong> Track your healthcare, employment, benefits</li>
+                        <li><strong>Insurance marketplace:</strong> Compare and enroll in coverage</li>
+                        <li><strong>Electronic Health Records:</strong> Portable medical history you control</li>
+                        <li><strong>Cooperative marketplace:</strong> Buy essentials at bulk cooperative prices</li>
+                        <li><strong>Banking/payments:</strong> Peer-to-peer transfers, bill pay, savings</li>
+                        <li><strong>Cryptocurrency:</strong> Cooperative-backed digital currency with real utility</li>
+                    </ul>
+                </div>
+
+                <div class="power-box">
+                    WE'RE HIRING LAID-OFF SOFTWARE DEVELOPERS<br>
+                    To build the tools WE THE PEOPLE need<br>
+                    Using cooperative savings to fund development
+                </div>
+
+                <p style="margin-top: 20px;"><strong>Why this matters:</strong> Current platforms extract wealth. Our platform redistributes savings. Bitcoin has no backing. Our crypto is backed by $2.73T in annual value creation. This is cooperative economics at scale.</p>
+
+                <p><strong>Timeline:</strong> Phase 1 (NOW) = Healthcare + Jobs. Phase 2 (2026) = Marketplace + Banking. Phase 3 (2027+) = Full integration + crypto.</p>
+            </div>
+        </div>
+
+        <div class="faq-item collapsed">
+            <div class="question">🗳️ Why is open enrollment season critical RIGHT NOW?</div>
+            <div class="answer">
+                <div class="crisis-box">
+                    <strong>ACA Open Enrollment: November 1 - January 15</strong>
+                    <ul>
+                        <li>Premiums DOUBLING in 2026 ($888 → $1,904/year)</li>
+                        <li>5 million Americans will LOSE coverage when subsidies expire</li>
+                        <li>Employer insurance up 7%</li>
+                        <li>Families desperate for alternatives</li>
+                    </ul>
+                </div>
+
+                <div class="highlight">
+                    <strong>DEMAND: Tell Representatives to Allow PHIERS in ACA Exchange</strong>
+                    <p>We're operational. We're proven. We save people thousands. The ONLY barrier is political permission to participate in the exchange.</p>
+                    
+                    <p style="margin-top: 15px;"><strong>What to say:</strong></p>
+                    <p>"My premiums are doubling. PHIERS saves $6,400/year per person. Allow them to participate in the ACA exchange THIS open enrollment period or explain why you're blocking affordable coverage."</p>
+                </div>
+
+                <div class="power-box">
+                    TIMING CREATES URGENCY:<br>
+                    Representatives can't delay until "next year"<br>
+                    Open enrollment happens NOW<br>
+                    Families need relief NOW<br>
+                    Act NOW or face consequences in 2026
+                </div>
+
+                <p style="margin-top: 20px;"><strong>This is why the petition + survey matters RIGHT NOW. Politicians can't ignore a crisis with a deadline.</strong></p>
+            </div>
+        </div>
+
+        <div class="faq-item collapsed">
+            <div class="question">❓ What makes PHIERS different from past movements that promised change?</div>
+            <div class="answer">
+                <div class="highlight">
+                    <strong>Five Critical Differences:</strong>
+
+                    <p style="margin-top: 15px;"><strong>1. Economic TEETH vs Moral Pressure</strong></p>
+                    <p>Past: "Politicians should do the right thing" (they don't)</p>
+                    <p>PHIERS: "We have $1.95B per district leverage—serve us or be replaced" (they must)</p>
+
+                    <p style="margin-top: 15px;"><strong>2. Operational NOW vs Future Promises</strong></p>
+                    <p>Past: "We'll build this if you elect us"</p>
+                    <p>PHIERS: "Mark Cuban operational, ZORTT proven, savings happening today"</p>
+
+                    <p style="margin-top: 15px;"><strong>3. Self-Funding vs Budget-Dependent</strong></p>
+                    <p>Past: Programs need Congressional appropriations (politicians can defund)</p>
+                    <p>PHIERS: $2.73T from efficiency gains (politicians can't stop it)</p>
+
+                    <p style="margin-top: 15px;"><strong>4. Accountability Tracking vs Hope</strong></p>
+                    <p>Past: Hope politicians keep promises</p>
+                    <p>PHIERS: Survey documents demands, tracks responses, enables replacement</p>
+
+                    <p style="margin-top: 15px;"><strong>5. Virtual Coordination vs Physical Protests</strong></p>
+                    <p>Past: Protests dispersed by police, organizers targeted</p>
+                    <p>PHIERS: 175M Americans coordinate virtually (safe, permanent, unstoppable)</p>
+                </div>
+
+                <div class="power-box">
+                    PAST MOVEMENTS: Hope + moral pressure<br>
+                    PHIERS: Mathematics + economic force<br><br>
+                    Results: Wishful thinking → Inevitable change
+                </div>
+            </div>
+        </div>
+
+        <a href="https://phiersale.github.io/PHIERStorm/" class="cta-button">
+            🔥 POLITICAL ACTION - Sign Petition + Survey
+        </a>
+
+        <a href="https://phiersale.github.io/phiers-Tgiving/" class="cta-button" style="background: linear-gradient(135deg, #4CAF50 0%, #2E7D32 100%);">
+            💚 MUTUAL AID - Join & Get Coverage
+        </a>
+
+        <div style="background: #2c3e50; color: white; padding: 30px; border-radius: 10px; margin-top: 30px; text-align: center;">
+            <h3 style="margin-bottom: 15px; color: #FFD700;">PHIERS Movement</h3>
+            <p style="font-size: 1.1rem; margin-bottom: 20px;"><strong>Thought Leaders • Movement Builders • Early Adopters</strong></p>
+            
+            <div style="margin: 20px 0;">
+                <p><strong>Political Action HQ:</strong> <a href="https://phiersale.github.io/PHIERStorm/" style="color: #3498db;">PHIERStorm</a></p>
+                <p><strong>Mutual Aid Solutions:</strong> <a href="https://phiersale.github.io/phiers-Tgiving/" style="color: #3498db;">phiers-Tgiving</a></p>
+                <p><strong>Main Portal:</strong> <a href="https://phiers.org" style="color: #3498db;">PHIERS.org</a></p>
+            </div>
+
+            <p style="margin-top: 20px; font-weight: bold; font-size: 1.2rem; color: #FFD700;">
+                175M Americans × $2.73T Savings = TEETH That Force Change
+            </p>
+
+            <p style="margin-top: 15px; font-size: 0.9em;">
+                Updated: November 29, 2025<br>
+                We're BUILDING the movement—all that's missing is YOU
+            </p>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.question');
+                question.addEventListener('click', function() {
+                    if (window.innerWidth <= 768) {
+                        faqItems.forEach(otherItem => {
+                            if (otherItem !== item) {
+                                otherItem.classList.add('collapsed');
+                            }
+                        });
+                    }
+                    item.classList.toggle('collapsed');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
