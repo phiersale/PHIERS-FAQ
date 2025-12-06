@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PHIERS FAQ - Complete Transparency | Every Question Answered</title>
-    <meta name="description" content="Honest answers about risk, coverage pathways, and the complete PHIERS strategy. Total transparency on the affordability solution.">
+    <title>MABAH FAQ - Frequently Asked Questions</title>
     <style>
         * {
             margin: 0;
@@ -13,148 +12,71 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
             line-height: 1.6;
-            color: #333;
-            background: #f7fafc;
-        }
-
-        /* STICKY SIDEBAR NAVIGATION */
-        .layout {
-            display: flex;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .sidebar {
-            position: sticky;
-            top: 20px;
-            width: 280px;
-            height: calc(100vh - 40px);
-            background: #2d3748;
-            color: white;
-            padding: 20px;
-            border-radius: 10px;
-            margin: 20px;
-            overflow-y: auto;
-        }
-
-        .sidebar h3 {
-            color: #4299e1;
-            margin-bottom: 15px;
-            font-size: 1.2rem;
-        }
-
-        .sidebar nav a {
-            display: block;
-            color: white;
-            text-decoration: none;
-            padding: 10px;
-            margin: 5px 0;
-            border-radius: 5px;
-            transition: background 0.3s;
-        }
-
-        .sidebar nav a:hover {
-            background: #4299e1;
-        }
-
-        .main-content {
-            flex: 1;
+            color: #2d3748;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             padding: 20px;
         }
 
         .container {
-            max-width: 900px;
+            max-width: 1000px;
+            margin: 0 auto;
         }
 
-        /* COPYRIGHT BANNER */
-        .copyright-banner {
-            background: rgba(0, 0, 0, 0.95);
-            color: white;
-            text-align: center;
-            padding: 15px;
-            margin-bottom: 20px;
-            border-radius: 10px;
-            border: 2px solid #FFD700;
-        }
-
-        .copyright-banner strong {
-            color: #FFD700;
-        }
-
-        /* DOWNLOAD BUTTON */
-        .download-section {
-            background: linear-gradient(135deg, #4299e1 0%, #3182ce 100%);
-            color: white;
-            padding: 20px;
-            border-radius: 10px;
-            margin-bottom: 20px;
-            text-align: center;
-        }
-
-        .download-button {
-            background: white;
-            color: #3182ce;
-            padding: 12px 30px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 700;
-            display: inline-block;
-            margin-top: 10px;
-            transition: all 0.3s;
-        }
-
-        .download-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
-        }
-
-        header {
-            background: white;
-            padding: 40px;
+        .header {
+            background: rgba(255, 255, 255, 0.98);
             border-radius: 15px;
+            padding: 30px;
             margin-bottom: 30px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
             text-align: center;
+        }
+
+        .logo {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: #667eea;
+            margin-bottom: 10px;
         }
 
         h1 {
-            color: #2c5282;
             font-size: 2.5rem;
+            color: #2d3748;
             margin-bottom: 15px;
         }
 
         .intro {
-            background: linear-gradient(135deg, #ed8936 0%, #dd6b20 100%);
+            background: linear-gradient(135deg, #48bb78 0%, #2f855a 100%);
             color: white;
             padding: 30px;
-            border-radius: 15px;
+            border-radius: 12px;
             margin-bottom: 30px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
         }
 
         .faq-section {
-            background: white;
+            background: rgba(255, 255, 255, 0.98);
+            border-radius: 15px;
             padding: 40px;
             margin-bottom: 30px;
-            border-radius: 15px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-            scroll-margin-top: 20px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
         }
 
-        .faq-section h2 {
-            color: #2c5282;
-            font-size: 2rem;
-            margin-bottom: 25px;
-            border-bottom: 3px solid #4299e1;
-            padding-bottom: 10px;
+        .category-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 30px 0 20px 0;
+            font-size: 1.8rem;
+            font-weight: 700;
         }
 
         .faq-item {
             margin-bottom: 30px;
             padding-bottom: 25px;
-            border-bottom: 1px solid #e2e8f0;
+            border-bottom: 2px solid #e2e8f0;
         }
 
         .faq-item:last-child {
@@ -162,42 +84,42 @@
         }
 
         .question {
-            color: #2c5282;
-            font-size: 1.4rem;
+            color: #667eea;
+            font-size: 1.3rem;
             font-weight: 700;
             margin-bottom: 15px;
             cursor: pointer;
-            padding: 20px;
+            padding: 15px;
             background: #ebf8ff;
-            border-radius: 10px;
-            border-left: 5px solid #4299e1;
+            border-radius: 8px;
+            border-left: 5px solid #667eea;
         }
 
         .question::before {
             content: "Q: ";
-            color: #4299e1;
+            color: #764ba2;
             font-weight: 900;
         }
 
         .answer {
             color: #2d3748;
+            font-size: 1.1rem;
             line-height: 1.8;
             padding: 20px;
-            font-size: 1.05rem;
+            background: #f7fafc;
+            border-radius: 8px;
+            margin-top: 10px;
         }
 
-        .answer h4 {
-            color: #2c5282;
-            margin-top: 20px;
-            margin-bottom: 10px;
-            font-size: 1.2rem;
+        .answer strong {
+            color: #667eea;
         }
 
         .highlight-box {
-            background: #e6fffa;
+            background: linear-gradient(135deg, #e6fffa 0%, #b2f5ea 100%);
             border-left: 5px solid #38b2ac;
             padding: 20px;
-            margin: 20px 0;
+            margin: 15px 0;
             border-radius: 8px;
         }
 
@@ -205,455 +127,531 @@
             background: #fff5f5;
             border-left: 5px solid #f56565;
             padding: 20px;
-            margin: 20px 0;
+            margin: 15px 0;
             border-radius: 8px;
         }
 
-        ul, ol {
-            margin-left: 25px;
-            margin-top: 10px;
-            margin-bottom: 15px;
+        ul {
+            margin: 15px 0 15px 25px;
         }
 
         li {
             margin-bottom: 10px;
         }
 
-        strong {
-            color: #2c5282;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-        }
-
-        th, td {
-            border: 1px solid #e2e8f0;
-            padding: 12px;
-            text-align: left;
-        }
-
-        th {
-            background: #4299e1;
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
+            padding: 15px 35px;
+            text-decoration: none;
+            border-radius: 50px;
             font-weight: 700;
+            font-size: 1.1rem;
+            margin: 10px 5px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
         }
 
-        tr:nth-child(even) {
-            background: #f7fafc;
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.6);
         }
 
-        footer {
-            background: #2d3748;
-            color: white;
+        .back-link {
             text-align: center;
-            padding: 30px;
-            border-radius: 15px;
-            margin-top: 40px;
+            margin: 30px 0;
         }
 
-        @media (max-width: 1024px) {
-            .layout {
-                flex-direction: column;
+        @media (max-width: 768px) {
+            .logo {
+                font-size: 2rem;
             }
-            
-            .sidebar {
-                position: relative;
-                width: 100%;
-                height: auto;
-                margin: 20px 0;
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .question {
+                font-size: 1.1rem;
             }
         }
     </style>
 </head>
 <body>
-    <div class="layout">
-        <!-- SIDEBAR NAVIGATION -->
-        <aside class="sidebar">
-            <h3>📑 Quick Navigation</h3>
-            <nav>
-                <a href="#critical">🔥 Critical Questions</a>
-                <a href="#basics">📚 The Basics</a>
-                <a href="#fight-club">⚡ Fight Club</a>
-                <a href="#35-rule">🎯 3.5% Rule</a>
-                <a href="#how-works">⚙️ How It Works</a>
-                <a href="#political">🗳️ Political</a>
-                <a href="#validation">✅ Validation</a>
-                <a href="#implementation">🚀 Implementation</a>
-                <a href="#scale">🌟 100M Vision</a>
-            </nav>
-            
-            <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #4a5568;">
-                <p style="font-size: 0.9rem; opacity: 0.8;">Complete transparency. Every objection answered.</p>
+    <div class="container">
+        <div class="header">
+            <div class="logo">🔥 MABAH FAQ</div>
+            <h1>Frequently Asked Questions</h1>
+            <p style="font-size: 1.1rem; color: #718096;">Everything You Need To Know About Making America Better And Healthier</p>
+        </div>
+
+        <div class="intro">
+            <h2 style="color: white; margin-bottom: 15px;">The Simple Truth</h2>
+            <p style="font-size: 1.2rem;">
+                PHIERS eliminates corporate middleman extraction from healthcare, generating $2.37 TRILLION in annual savings. These savings fund universal telehealth coverage, universal basic income ($833/month), millions of jobs, and complete safety net restoration. <strong>No new taxes. No new debt. Just pure operational savings.</strong>
+            </p>
+        </div>
+
+        <div class="faq-section">
+            <div class="category-header">🎯 THE BREAKTHROUGH: How It Works</div>
+
+            <div class="faq-item">
+                <div class="question">How does PHIERS generate $2.37 TRILLION in savings?</div>
+                <div class="answer">
+                    <p><strong>Two primary sources:</strong></p>
+                    
+                    <div class="highlight-box">
+                        <p><strong>1. Insurance Substitution ($1.77 Trillion):</strong></p>
+                        <p>80% of insured Americans (224 million people) do NOT need hospitalization or specialty care. They only need:</p>
+                        <ul>
+                            <li>Primary care doctor visits</li>
+                            <li>Prescription medications</li>
+                            <li>Basic lab work</li>
+                            <li>Mental health counseling</li>
+                            <li>Chronic condition management</li>
+                        </ul>
+                        <p>All of this can be delivered through telehealth. Instead of paying $8,500/year (individuals) or $24,000/year (families) for traditional insurance, they can switch to telehealth at $600/year ($50/month).</p>
+                        <p><strong>Savings: $7,900 per individual or $23,400 per family</strong></p>
+                        <p><strong>224 million Americans × $7,900 average = $1.77 TRILLION annually</strong></p>
+                    </div>
+
+                    <div class="highlight-box">
+                        <p><strong>2. Prescription Drug Savings ($600 Billion):</strong></p>
+                        <p>Mark Cuban's Cost Plus Drug Company proves that buying prescriptions at cost + 15% markup eliminates the 80-90% markup from pharmacy benefit managers (PBMs) and insurance companies.</p>
+                        <p>Average American spends $1,200/year on prescriptions. PHIERS bulk purchasing through Cost Plus model saves $960-1,080 per person annually.</p>
+                        <p><strong>224 million Americans × ~$900 average savings = $600+ BILLION annually</strong></p>
+                    </div>
+
+                    <p style="margin-top: 20px;"><strong>TOTAL: $1.77T + $0.60T = $2.37 TRILLION per year</strong></p>
+                </div>
             </div>
-        </aside>
 
-        <!-- MAIN CONTENT -->
-        <div class="main-content">
-            <div class="container">
-                <!-- COPYRIGHT BANNER -->
-                <div class="copyright-banner">
-                    <strong>© PHIERS.org Since 2014 - Original Concept - All Rights Reserved</strong><br>
-                    Prior art documented. Mark Cuban Cost Plus & Zort Elite validation.
-                </div>
+            <div class="faq-item">
+                <div class="question">How does the self-funding loop work? Why is my telehealth coverage FREE?</div>
+                <div class="answer">
+                    <p><strong>This is the breakthrough that changes everything:</strong></p>
+                    
+                    <p><strong>Step 1:</strong> You join PHIERS and access Mark Cuban Cost Plus for your prescriptions. You save 80-90% on medication costs.</p>
+                    
+                    <p><strong>Step 2:</strong> Your prescription savings accumulate. Average American spends $1,200/year on prescriptions. PHIERS bulk purchasing saves you $960-1,080/year. <strong>That's $80-90 saved per month.</strong></p>
+                    
+                    <p><strong>Step 3:</strong> Your telehealth plan costs $50/month ($600/year). But you're saving $80-90/month on prescriptions. <strong>Your prescription savings MORE than cover your telehealth insurance!</strong></p>
+                    
+                    <p><strong>Step 4:</strong> The surplus ($20-40/month per person) helps sponsor placement for people who can't afford prescriptions yet or who need additional support.</p>
 
-                <!-- DOWNLOAD SECTION -->
-                <div class="download-section">
-                    <h3>📥 Download This FAQ</h3>
-                    <p>Take it with you for offline reading or sharing</p>
-                    <a href="/FAQ_COMPREHENSIVE_ENHANCED.md" download class="download-button">Download FAQ (Markdown)</a>
-                </div>
-
-                <header>
-                    <h1>PHIERS FAQ</h1>
-                    <p style="font-size: 1.2rem; color: #4a5568; margin-top: 10px;">Complete Transparency | Every Objection Answered</p>
-                    <p style="margin-top: 15px; font-size: 1rem;">Total honesty about risk, coverage pathways, and the complete PHIERS strategy</p>
-                </header>
-
-                <!-- INTRO -->
-                <div class="intro">
-                    <h2 style="margin-bottom: 15px; text-align: center;">The Affordability Crisis Is NOW</h2>
-                    <p style="font-size: 1.1rem; text-align: center; margin: 15px 0;">
-                        ACA premiums doubling ($888 → $1,904 for 2026) • 44% of Americans struggling • Government shutdown centered on affordability
-                    </p>
-                    <p style="font-size: 1.2rem; text-align: center; margin-top: 20px; font-weight: 700;">
-                        PHIERS delivers immediate affordability relief: $600/year vs $8,500/year
-                    </p>
-                </div>
-
-                <!-- CRITICAL QUESTIONS -->
-                <div id="critical" class="faq-section">
-                    <h2>🔥 The Most Critical Questions First</h2>
-                    <p style="margin-bottom: 30px; font-size: 1.1rem;">We know you have concerns. Here are honest, complete answers.</p>
-
-                    <div class="faq-item">
-                        <div class="question">"What if I get in an accident? You're asking me to drop insurance and just HOPE I don't get sick?"</div>
-                        <div class="answer">
-                            <div class="warning-box">
-                                <p><strong>HONEST ANSWER - WE ACKNOWLEDGE THE RISK:</strong></p>
-                                <p style="margin-top: 10px;">If you drop traditional insurance and only have telehealth, and you get in a serious accident or develop cancer, you'll face significant medical bills. This is the risk of being underinsured.</p>
-                            </div>
-
-                            <p><strong>BUT HERE'S THE COMPLETE STRATEGY:</strong></p>
-
-                            <h4>PHASE 1: Right Now (0-3.5%)</h4>
-                            <ul>
-                                <li><strong>If you're healthy and rarely use doctors:</strong> $600/year telehealth saves you $7,900 annually</li>
-                                <li><strong>If you have chronic conditions or worry about accidents:</strong> KEEP your traditional insurance and ADD PHIERS prescription savings (80-90% reduction) - this alone can save $3,000-5,000/year on meds</li>
-                                <li><strong>If you're uninsured:</strong> $600/year telehealth is infinitely better than nothing</li>
-                            </ul>
-
-                            <h4>PHASE 2: At 3.5% (11.6 Million Members)</h4>
-                            <p>When we hit 11.6 million members, we qualify for VA-level negotiating power (VA covers 9.5M veterans with bulk purchasing). At this threshold:</p>
-                            <ul>
-                                <li><strong>FREE comprehensive coverage activates</strong> for all members</li>
-                                <li>Hospital coverage included</li>
-                                <li>Specialist coverage included</li>
-                                <li>No deductibles, no copays</li>
-                                <li><strong>The risk period ENDS</strong></li>
-                            </ul>
-
-                            <h4>PHASE 3: Full Implementation</h4>
-                            <p>With $2.73 TRILLION in annual savings, we can:</p>
-                            <ul>
-                                <li>Build/buy our own health centers</li>
-                                <li>Cover deductibles for people keeping traditional insurance</li>
-                                <li>Subsidize comprehensive coverage for those who need it NOW</li>
-                                <li>Contract with CMS to reduce costs for ALL Americans</li>
-                            </ul>
-
-                            <div class="highlight-box">
-                                <p><strong>THE MATH ON RISK:</strong></p>
-                                <ul>
-                                    <li>Probability of hospitalization for working-age adults: 12-15% annually</li>
-                                    <li>85-88% never hospitalized in a given year (CDC data)</li>
-                                    <li>At $7,900 annual savings, you can afford catastrophic coverage rider ($100-200/month) and STILL save $6,000+</li>
-                                </ul>
-                            </div>
-
-                            <p style="margin-top: 20px;"><strong>YOUR CHOICE PATHWAY:</strong></p>
-                            <ul>
-                                <li>✅ <strong>LOW RISK TOLERANCE:</strong> Keep traditional insurance + add PHIERS prescription savings</li>
-                                <li>✅ <strong>MODERATE RISK:</strong> $600 telehealth + $200/month catastrophic = $3,000/year total (save $5,500)</li>
-                                <li>✅ <strong>HIGH RISK TOLERANCE:</strong> $600 telehealth only, bank the $7,900 savings</li>
-                                <li>✅ <strong>AT 3.5%:</strong> Everyone gets comprehensive coverage regardless of choice</li>
-                            </ul>
-
-                            <p style="margin-top: 20px; font-weight: 600;">Bottom line: We're not hiding the risk. We're saying: help us get to 11.6 million members and the risk disappears for everyone. The faster we grow, the faster comprehensive coverage activates.</p>
-                        </div>
+                    <div class="highlight-box">
+                        <p style="font-size: 1.2rem; font-weight: bold; text-align: center;">
+                            For every $50 you save on prescriptions monthly, we can sponsor placement of ONE person into a $50/month telehealth plan
+                        </p>
                     </div>
 
-                    <div class="faq-item">
-                        <div class="question">How does FREE at 3.5% actually work? Show me the REAL mechanism.</div>
-                        <div class="answer">
-                            <p><strong>This is based on VA negotiating power + substitution breakthrough:</strong></p>
+                    <p><strong>The Result:</strong> A positive reinforcement loop where each person's prescription savings fund their own telehealth coverage PLUS help fund coverage for others. The more people who join, the stronger the system becomes.</p>
 
-                            <h4>THE VA PRECEDENT:</h4>
-                            <p>The Department of Veterans Affairs covers 9.5 million veterans. Because they buy in bulk, they negotiate prices 80-90% lower than private insurance pays.</p>
-                            <p><strong>Example:</strong> Imatinib (cancer drug): $9,657/year private → $14/year VA</p>
-                            <p>The VA doesn't have magic - they have <strong>VOLUME</strong>.</p>
-
-                            <h4>PHIERS AT 3.5% = 11.6 MILLION PEOPLE:</h4>
-                            <ul>
-                                <li>More than the VA (9.5M)</li>
-                                <li>Qualifies for same bulk negotiating power</li>
-                                <li>We pass those savings to members AND to CMS (Medicare/Medicaid)</li>
-                            </ul>
-
-                            <h4>THE SUBSTITUTION BREAKTHROUGH:</h4>
-                            <p>Most Americans pay $7,000-$21,000/year for insurance that covers hospitalization "just in case." But:</p>
-                            <ul>
-                                <li>80-85% of working-age adults are NEVER hospitalized in a given year (CDC data)</li>
-                                <li>They're paying $7,000+ for coverage they don't use</li>
-                                <li>Telehealth handles 80% of doctor visits perfectly</li>
-                            </ul>
-
-                            <div class="highlight-box">
-                                <h4>THE MATH THAT MAKES FREE POSSIBLE:</h4>
-                                
-                                <p><strong>Starting Point:</strong></p>
-                                <ul>
-                                    <li>11.6M members paying $600/year = <strong>$7 billion</strong> in membership revenue</li>
-                                    <li>11.6M members saving $7,900 each = <strong>$91.6 billion</strong> in TOTAL savings across members</li>
-                                </ul>
-
-                                <p style="margin-top: 15px;"><strong>Prescription Savings:</strong></p>
-                                <ul>
-                                    <li>Mark Cuban Cost Plus proves 80-90% savings achievable</li>
-                                    <li>Average American spends $1,200/year on prescriptions</li>
-                                    <li>At 80% savings = $960/year savings per person</li>
-                                    <li>11.6M people × $960 = <strong>$11.1 billion</strong> in annual prescription savings</li>
-                                </ul>
-
-                                <p style="margin-top: 15px;"><strong>Insurance Substitution (The Big One):</strong></p>
-                                <ul>
-                                    <li>80% of 11.6M = 9.3M people don't need hospitalization coverage</li>
-                                    <li>They switch from $7,000/year to $600/year = $6,400 savings each</li>
-                                    <li>9.3M × $6,400 = <strong>$59.5 billion</strong> in substitution savings annually</li>
-                                </ul>
-
-                                <p style="margin-top: 20px; font-size: 1.2rem; text-align: center;"><strong>Total Pool Available: $7B + $11.1B + $59.5B = $77.6 BILLION</strong></p>
-                            </div>
-
-                            <h4>HOW WE USE IT:</h4>
-                            <ul>
-                                <li><strong>$10B:</strong> Comprehensive coverage infrastructure (claims processing, provider network)</li>
-                                <li><strong>$15B:</strong> Hospital/specialist coverage for all 11.6M members</li>
-                                <li><strong>$20B:</strong> Build/buy health centers (one-time investment, spreads over years)</li>
-                                <li><strong>$10B:</strong> Cover deductibles for those keeping traditional insurance</li>
-                                <li><strong>$22.6B:</strong> Reserve fund for growth, contingencies, expansion</li>
-                            </ul>
-
-                            <p style="margin-top: 20px;"><strong>Validation:</strong></p>
-                            <ul>
-                                <li>Medicare covers 65M people with $1.5 trillion budget = $23,000 per person</li>
-                                <li>PHIERS covers 11.6M with $77.6B available = $6,690 per person</li>
-                                <li>We don't need to match Medicare's $23K because we're younger/healthier population</li>
-                                <li>$6,690 per person MORE than sufficient for comprehensive coverage</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <div class="question">What about people who NEED traditional insurance? Like cancer patients or people with diabetes?</div>
-                        <div class="answer">
-                            <p><strong>They keep it - and WE PAY FOR IT at scale:</strong></p>
-
-                            <h4>RIGHT NOW (Before 3.5%):</h4>
-                            <ul>
-                                <li>Keep your traditional insurance if you need specialist care</li>
-                                <li>Add PHIERS prescription savings (Mark Cuban Cost Plus)</li>
-                                <li>Reduce your out-of-pocket costs by 80-90% on medications</li>
-                                <li><strong>Example:</strong> $5,000/year in diabetes meds → $500/year = $4,500 savings</li>
-                            </ul>
-
-                            <h4>AT 3.5% (Critical Mass):</h4>
-                            <p>With $2.73 TRILLION in annual savings nationally, we can afford to:</p>
-
-                            <ol>
-                                <li style="margin: 15px 0;"><strong>Subsidize Traditional Insurance Premiums</strong>
-                                    <ul>
-                                        <li>Person with cancer needs $30,000/year comprehensive plan</li>
-                                        <li>PHIERS cooperative pays $29,400</li>
-                                        <li>Member pays $600 (same as everyone else)</li>
-                                        <li>Still cheaper for cooperative than letting them be uninsured</li>
-                                    </ul>
-                                </li>
-
-                                <li style="margin: 15px 0;"><strong>Cover All Deductibles</strong>
-                                    <ul>
-                                        <li>Traditional insurance has $5,000 deductible?</li>
-                                        <li>Cooperative covers it</li>
-                                        <li>Member never pays deductible out of pocket</li>
-                                    </ul>
-                                </li>
-
-                                <li style="margin: 15px 0;"><strong>Build Specialized Care Centers</strong>
-                                    <ul>
-                                        <li>Use $2.73T savings to buy/build healthcare facilities</li>
-                                        <li>Staff with doctors, nurses, specialists</li>
-                                        <li>Members access care at no additional cost</li>
-                                        <li>Similar to Kaiser Permanente model but cooperative-owned</li>
-                                    </ul>
-                                </li>
-                            </ol>
-
-                            <div class="highlight-box">
-                                <h4>Example Scenario - Diabetes Patient:</h4>
-                                <table>
-                                    <thead>
-                                        <tr>
-                                            <th>Timeline</th>
-                                            <th>Costs</th>
-                                            <th>Annual Total</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td><strong>Today</strong></td>
-                                            <td>Insurance: $8,500<br>Deductible: $3,000<br>Insulin: $5,000</td>
-                                            <td><strong>$16,500/year</strong></td>
-                                        </tr>
-                                        <tr>
-                                            <td><strong>PHIERS Today</strong></td>
-                                            <td>Keep insurance: $8,500<br>Deductible: $3,000<br>Insulin via Cost Plus: $500</td>
-                                            <td><strong>$12,000/year<br>(saves $4,500)</strong></td>
-                                        </tr>
-                                        <tr>
-                                            <td><strong>PHIERS At 3.5%</strong></td>
-                                            <td>Coverage: $600<br>Deductible: $0<br>Insulin: $0</td>
-                                            <td><strong>$600/year<br>(saves $15,900)</strong></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-
-                            <p style="margin-top: 20px;"><strong>THE STRATEGIC GOAL:</strong></p>
-                            <p>Once we hit 3.5% and qualify for VA-level negotiating, we partner with CMS (Medicare/Medicaid):</p>
-                            <ul>
-                                <li>CMS buys prescriptions through PHIERS instead of traditional PBMs</li>
-                                <li>CMS saves billions annually</li>
-                                <li>We use those savings to subsidize comprehensive coverage</li>
-                                <li>Eventually, traditional insurance becomes unnecessary because cooperative covers everything</li>
-                            </ul>
-                        </div>
-                    </div>
+                    <p><strong>Eventually, when we reach critical mass (3.5% of Americans), EVERYONE gets coverage funded by collective savings.</strong></p>
                 </div>
+            </div>
 
-                <!-- MORE SECTIONS CONTINUE... -->
-                <div class="faq-section" id="scale">
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <span class="emoji">🚀</span>
-                            Q: What happens when we reach 100 MILLION members?
-                        </div>
-                        <div class="faq-answer">
-                            <p><strong>A: We become THE PEOPLE'S CO-OP PLAN—the dominant healthcare force in America.</strong></p>
-                            
-                            <h4>THE AVAILABLE MARKET:</h4>
-                            <ul>
-                                <li><strong>175 million</strong> in workforce</li>
-                                <li><strong>150 million</strong> in CMS (Medicare/Medicaid)</li>
-                                <li><strong>130 million</strong> in private insurance</li>
-                                <li><strong>75+ million</strong> in gig economy</li>
-                                <li><strong>Total: 300M+ Americans eligible for PHIERS</strong></li>
-                            </ul>
+            <div class="faq-item">
+                <div class="question">What does the $2.37 trillion actually fund?</div>
+                <div class="answer">
+                    <p><strong>Here's exactly where every dollar goes:</strong></p>
 
-                            <h4>AT 100M MEMBERS:</h4>
-                            
-                            <div class="highlight-box">
-                                <h4>💰 FINANCIAL POWER: $790 Billion Annual Pool</h4>
-                                <ul>
-                                    <li>$60B member revenue ($600 × 100M)</li>
-                                    <li>$300B+ prescription savings (80-90% off retail)</li>
-                                    <li>$430B+ telehealth substitution savings</li>
-                                    <li><strong>FREE comprehensive coverage for all 100M members</strong></li>
-                                    <li>Subsidize traditional insurance for complex cases</li>
-                                    <li>Build nationwide health centers</li>
-                                    <li>Fund 5-10 million AI-resistant jobs with comprehensive benefits</li>
-                                </ul>
-                                <p style="margin-top: 15px;"><strong>PHIERSWorks transforms employment:</strong> By providing comprehensive insurance benefits to all members, employers can hire more workers and reduce individual work hours, improving work-life balance. Members gain access to PHIERSale Marketplace and PHIERPlace Co-op resource matching and bartering services, freeing workers from exploitative wage-dependency while building cooperative economic networks.</p>
-                            </div>
-
-                            <div class="highlight-box">
-                                <h4>🏛️ POLITICAL POWER: Unprecedented Grassroots Leverage</h4>
-                                <ul>
-                                    <li><strong>230,000 members per congressional district</strong></li>
-                                    <li><strong>$1.8 billion per district</strong> in local economic impact</li>
-                                    <li>Every representative MUST answer to PHIERS members</li>
-                                    <li>Corporate lobbying cannot compete with these numbers</li>
-                                </ul>
-                            </div>
-
-                            <div class="highlight-box">
-                                <h4>💪 NEGOTIATING POWER: Market Dominance</h4>
-                                <ul>
-                                    <li><strong>10× larger than VA</strong> (9.5M veterans)</li>
-                                    <li>Larger than any insurance company</li>
-                                    <li>Pharma/hospitals MUST negotiate with us</li>
-                                    <li>Unmatched bulk purchasing leverage</li>
-                                </ul>
-                            </div>
-
-                            <h4>🌟 THE PEOPLE'S CO-OP PLAN:</h4>
-                            <p>At 100M members, we're not just an alternative—<strong>we're DOMINANT.</strong></p>
-                            
-                            <p><strong>The transformation:</strong></p>
-                            <ul>
-                                <li>Corporate extraction → Cooperative ownership</li>
-                                <li>Profit maximization → Community benefit</li>
-                                <li>CEO bonuses → Member dividends</li>
-                                <li>Shareholder value → Member value</li>
-                                <li>Healthcare as profit center → Healthcare as cooperative right</li>
-                            </ul>
-
-                            <p style="margin-top: 20px;"><strong>Private insurance becomes the niche option for the wealthy. The majority of Americans are in THE PEOPLE'S CO-OP PLAN.</strong></p>
-
-                            <div class="highlight-box">
-                                <h4>THE PROGRESSION:</h4>
-                                <p><strong>3.5% (11.6M)</strong> → FREE comprehensive coverage unlocks</p>
-                                <p><strong>30% (100M)</strong> → THE PEOPLE'S CO-OP PLAN becomes dominant</p>
-                                <p><strong>Majority (175M+)</strong> → Economic transformation complete</p>
-                            </div>
-
-                            <p style="margin-top: 20px;"><strong>This is the endgame:</strong> Proof at national scale that cooperative economics defeats corporate extraction. When 100 million Americans demonstrate that collective action delivers superior results at lower cost while keeping wealth in communities, the entire economic paradigm shifts.</p>
-
-                            <p><strong>$790 billion stays in communities. Millions of AI-resistant jobs. Healthcare reimagined as a cooperative right. This is what victory looks like.</strong></p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- MORE SECTIONS CONTINUE... -->
-                <div class="faq-section">
-                    <h2>📚 All Other Questions</h2>
-                    <p style="margin-bottom: 20px;">For complete answers to all remaining questions including:</p>
-                    <ul style="margin-bottom: 30px;">
-                        <li>What is PHIERS? (The basics)</li>
-                        <li>The Fight Club connection</li>
-                        <li>The 3.5% rule and Harvard research</li>
-                        <li>How do I join? (Step-by-step)</li>
-                        <li>What about hospitals, doctors, emergency care?</li>
-                        <li>Political questions and leverage</li>
-                        <li>Complete validation and prior art</li>
+                    <p><strong>1. Universal Telehealth Coverage: $134.4 Billion</strong></p>
+                    <ul>
+                        <li>$600/year × 224 million people = $134.4B</li>
+                        <li>Covers everyone's basic healthcare through telehealth</li>
                     </ul>
-                    <p><strong>Download the complete FAQ:</strong></p>
-                    <a href="/FAQ_COMPREHENSIVE_ENHANCED.md" download class="download-button" style="color: #3182ce; background: #ebf8ff;">Download Full FAQ (Markdown)</a>
-                </div>
 
-                <!-- CTA SECTION -->
-                <div style="background: linear-gradient(135deg, #4299e1 0%, #3182ce 100%); color: white; padding: 40px; border-radius: 15px; text-align: center; margin-top: 40px;">
-                    <h2 style="color: white; margin-bottom: 20px;">Ready to Join the Affordability Solution?</h2>
-                    <p style="font-size: 1.2rem; margin-bottom: 25px;">Your questions answered. The path is clear. The time is NOW.</p>
-                    <div>
-                        <a href="https://forms.gle/wtcGaADjp6MnAveH9" style="background: white; color: #3182ce; padding: 15px 35px; border-radius: 8px; text-decoration: none; font-weight: 700; margin: 10px; display: inline-block;">Sign Petition</a>
-                        <a href="https://forms.gle/yG2EiVUfJhSLGsVu6" style="background: white; color: #3182ce; padding: 15px 35px; border-radius: 8px; text-decoration: none; font-weight: 700; margin: 10px; display: inline-block;">Complete Survey</a>
+                    <p><strong>2. Universal Basic Income (UBI): $2.24 Trillion</strong></p>
+                    <ul>
+                        <li>Remaining $2.24 trillion ÷ 224 million people = $10,000 per person per year</li>
+                        <li>That's approximately <strong>$833 per month</strong> for every American</li>
+                        <li>Helps with inflation, cost of living, housing, food, everything</li>
+                    </ul>
+
+                    <p><strong>3. Job Creation: Fully Funded</strong></p>
+                    <ul>
+                        <li>Healthcare support workers (home health, PT/OT assistants)</li>
+                        <li>Community services (childcare, elder care, daycare)</li>
+                        <li>Food security (community gardens, food distribution)</li>
+                        <li>Infrastructure (repairs, maintenance, weatherization)</li>
+                        <li>Crisis response (community health outreach)</li>
+                        <li>All AI-resistant jobs that benefit from human touch</li>
+                    </ul>
+
+                    <p><strong>4. Safety Net Restoration: Fully Funded</strong></p>
+                    <ul>
+                        <li>SNAP/food assistance</li>
+                        <li>Housing support</li>
+                        <li>Education programs</li>
+                        <li>Emergency aid</li>
+                        <li>All currently threatened by DOGE cuts</li>
+                    </ul>
+
+                    <div class="highlight-box">
+                        <p style="font-weight: bold; text-align: center; font-size: 1.2rem;">
+                            All funded by eliminating corporate middleman extraction. Zero new taxes. Zero new debt.
+                        </p>
                     </div>
                 </div>
+            </div>
 
-                <footer>
-                    <p><strong>PHIERS FAQ</strong> | Complete Transparency on the Affordability Solution</p>
-                    <p style="margin-top: 15px;"><strong>© PHIERS.org Since 2014 - Original Concept - All Rights Reserved</strong></p>
-                    <p style="margin-top: 10px;">Contact: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="acdbc8dcdec5cfc9ecdcc4c5c9dedf82c3decb">[email&#160;protected]</a> | (916)306-8967</p>
-                    <p style="margin-top: 10px;">Prior art documented. Mark Cuban Cost
+            <div class="faq-item">
+                <div class="question">What if I need hospitalization or specialty care?</div>
+                <div class="answer">
+                    <p><strong>You keep your traditional insurance!</strong> PHIERS is designed for the 80% of people who don't need expensive hospital coverage. If you:</p>
+                    <ul>
+                        <li>Have chronic conditions requiring specialists</li>
+                        <li>Need surgery or hospitalization</li>
+                        <li>Have complex medical needs</li>
+                        <li>Prefer traditional insurance</li>
+                    </ul>
+                    <p>Then you stay with traditional insurance. PHIERS is for the 224 million Americans whose healthcare needs can be met through telehealth, saving them $7,900+ per year.</p>
+
+                    <p><strong>Plus:</strong> Even if you keep traditional insurance, you can STILL use PHIERS for prescription savings through Mark Cuban Cost Plus, saving 80-90% on medications.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-section">
+            <div class="category-header">🎯 THE POLITICS: Why This Works</div>
+
+            <div class="faq-item">
+                <div class="question">Why will Republicans support this?</div>
+                <div class="answer">
+                    <p><strong>Republicans get everything they want:</strong></p>
+                    <ul>
+                        <li><strong>Massive spending cuts:</strong> $2.37 trillion in government healthcare spending eliminated</li>
+                        <li><strong>No new taxes:</strong> Funded entirely by operational savings</li>
+                        <li><strong>No new government programs:</strong> Uses existing cooperative/private sector models</li>
+                        <li><strong>Free market solution:</strong> Mark Cuban's company proves it works</li>
+                        <li><strong>Job creation:</strong> Millions of jobs during AI displacement crisis</li>
+                        <li><strong>Reduced government size:</strong> Less bureaucracy, more efficiency</li>
+                    </ul>
+                    <div class="highlight-box">
+                        <p><strong>GOP senators like Josh Hawley already admit healthcare is in crisis. PHIERS solves it using conservative principles: market competition, reduced spending, no new taxes.</strong></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="question">Why will Democrats support this?</div>
+                <div class="answer">
+                    <p><strong>Democrats get everything they want:</strong></p>
+                    <ul>
+                        <li><strong>Universal healthcare coverage:</strong> Everyone gets basic insurance through telehealth</li>
+                        <li><strong>Universal Basic Income:</strong> $833/month for every American</li>
+                        <li><strong>Safety net expansion:</strong> Full funding for SNAP, housing, childcare, education</li>
+                        <li><strong>Economic justice:</strong> Cooperative ownership gives workers power</li>
+                        <li><strong>Job creation:</strong> Millions of good-paying, AI-resistant jobs</li>
+                        <li><strong>Corporate accountability:</strong> Eliminates healthcare profiteering</li>
+                    </ul>
+                    <div class="highlight-box">
+                        <p><strong>Progressive leaders like Zohran Mamdani need economic leverage to force change. PHIERS provides the mathematical weapon that makes corporate lobbying irrelevant.</strong></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="question">What is the 3.5% rule and why does it matter?</div>
+                <div class="answer">
+                    <p><strong>Research by Erica Chenoweth (Harvard Kennedy School) analyzed 323 movements from 1900-2006.</strong> Her finding:</p>
+
+                    <div class="highlight-box">
+                        <p style="font-size: 1.2rem; font-weight: bold; text-align: center;">
+                            When just 3.5% of a population actively participates in a movement, it ALWAYS succeeds. 100% success rate.
+                        </p>
+                    </div>
+
+                    <p><strong>For the United States:</strong></p>
+                    <ul>
+                        <li>U.S. Population: 335 million</li>
+                        <li>3.5% = 11.7 million Americans</li>
+                        <li>Each Congressional District: ~770,000 people</li>
+                        <li>3.5% per district = ~27,000 constituents</li>
+                    </ul>
+
+                    <p><strong>What This Means:</strong></p>
+                    <p>When 27,000 constituents in each congressional district sign the petition saying "adopt PHIERS, show us something better, or we'll primary you in 2026," elected officials have NO choice but to listen.</p>
+
+                    <p><strong>The Economic Leverage:</strong></p>
+                    <ul>
+                        <li>$1.95 BILLION economic impact per district (baseline)</li>
+                        <li>230:1 advantage over pharmaceutical lobbying</li>
+                        <li>Scales to 2,000:1 as participation grows</li>
+                    </ul>
+
+                    <p>Corporate lobbying spends millions. PHIERS represents BILLIONS per district. Mathematical superiority makes compromise unnecessary.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="question">Both parties get what they want with no compromise? How is that possible?</div>
+                <div class="answer">
+                    <p><strong>Because we're not redistributing existing money - we're eliminating waste.</strong></p>
+
+                    <p>Currently, healthcare has massive corporate extraction:</p>
+                    <ul>
+                        <li>Insurance companies: 20-30% administrative costs + profit</li>
+                        <li>Pharmacy Benefit Managers: 80-90% markup on prescriptions</li>
+                        <li>Hospital billing complexity: Billions in administrative waste</li>
+                    </ul>
+
+                    <p><strong>When you eliminate this extraction, you generate $2.37 TRILLION in NEW savings.</strong> This isn't taking from one group to give to another. It's recovering money that was being extracted by middlemen.</p>
+
+                    <div class="highlight-box">
+                        <p><strong>Republicans get their spending cuts (no government healthcare spending needed).</strong></p>
+                        <p><strong>Democrats get their social programs (universal healthcare + UBI fully funded).</strong></p>
+                        <p><strong>Both get complete victories because the savings are SO MASSIVE they fund everything.</strong></p>
+                    </div>
+
+                    <p>This is why corporate lobbying will fight this so hard - they're the ones losing their extraction profits. But once we hit 3.5% participation, their lobbying money becomes irrelevant against our mathematical superiority.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-section">
+            <div class="category-header">🎯 THE VALIDATION: Is This Real?</div>
+
+            <div class="faq-item">
+                <div class="question">Has anyone actually done this successfully?</div>
+                <div class="answer">
+                    <p><strong>Yes. The models are operational RIGHT NOW:</strong></p>
+
+                    <p><strong>1. Mark Cuban Cost Plus Drug Company</strong></p>
+                    <ul>
+                        <li>Operational at 200+ Giant Eagle pharmacies nationwide</li>
+                        <li>Delivers 80-90% prescription savings exactly as we predicted</li>
+                        <li>Proves cooperative purchasing works at scale</li>
+                        <li>Website: costplusdrugs.com</li>
+                    </ul>
+
+                    <p><strong>2. Telehealth Platforms</strong></p>
+                    <ul>
+                        <li>Multiple companies delivering comprehensive coverage at $600/year price point</li>
+                        <li>Validates methodologies we documented over a decade ago</li>
+                        <li>Proves 80% of healthcare needs can be met through telehealth</li>
+                    </ul>
+
+                    <p><strong>3. Chenoweth Research</strong></p>
+                    <ul>
+                        <li>323 movements analyzed from 1900-2006</li>
+                        <li>100% success rate when 3.5% participation reached</li>
+                        <li>Published in peer-reviewed academic research</li>
+                        <li>Harvard Kennedy School validation</li>
+                    </ul>
+
+                    <p><strong>4. AI Systems Analysis</strong></p>
+                    <ul>
+                        <li>Advanced AI systems confirm mathematical soundness</li>
+                        <li>Political viability validated across partisan spectrum</li>
+                        <li>Implementation pathway confirmed as achievable</li>
+                    </ul>
+
+                    <div class="highlight-box">
+                        <p style="font-weight: bold;">The concepts work. The math is solid. The models are proven. What we need now is POLITICAL LEVERAGE to implement at scale - and that requires hitting 3.5% participation.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="question">Why should I trust this isn't just another political promise?</div>
+                <div class="answer">
+                    <p><strong>Because this isn't a political promise - it's operational business models that already exist.</strong></p>
+
+                    <div class="warning-box">
+                        <p><strong>We're NOT asking you to trust politicians.</strong></p>
+                        <p><strong>We're NOT asking you to wait for Congress to act.</strong></p>
+                        <p><strong>We're NOT asking for government funding.</strong></p>
+                    </div>
+
+                    <p><strong>What we ARE doing:</strong></p>
+                    <ul>
+                        <li>Using Mark Cuban's Cost Plus (operational NOW) for prescription savings</li>
+                        <li>Using existing telehealth platforms (operational NOW) for coverage</li>
+                        <li>Using cooperative economics (like credit unions, which work) for structure</li>
+                        <li>Using proven research (Chenoweth) for participation strategy</li>
+                    </ul>
+
+                    <p><strong>The Difference:</strong></p>
+                    <p>Political promises require politicians to keep their word. PHIERS requires businesses to continue doing what they're already profitably doing. Mark Cuban doesn't run Cost Plus as charity - he makes money while saving people 80-90%. That's sustainable.</p>
+
+                    <div class="highlight-box">
+                        <p><strong>We're building economic alternatives that work better than current systems, then using 3.5% participation to force political recognition. We're not asking permission - we're creating mathematical superiority.</strong></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="question">What if I don't take any prescriptions? Does this still help me?</div>
+                <div class="answer">
+                    <p><strong>YES! The prescription savings fund the system, but YOU get benefits regardless:</strong></p>
+
+                    <p><strong>Direct Benefits You Get:</strong></p>
+                    <ul>
+                        <li><strong>FREE Telehealth Insurance:</strong> Worth $600/year, funded by collective prescription savings</li>
+                        <li><strong>$833/month UBI:</strong> From the $2.37 trillion in total savings</li>
+                        <li><strong>Job Access:</strong> Millions of AI-resistant jobs with good wages</li>
+                        <li><strong>Safety Net Protection:</strong> SNAP, housing, childcare all fully funded</li>
+                        <li><strong>Political Power:</strong> Your participation creates leverage to force change</li>
+                    </ul>
+
+                    <p><strong>How It Works:</strong></p>
+                    <p>The people taking prescriptions generate massive savings ($600+ billion). Combined with insurance substitution savings ($1.77 trillion), this creates a pool of $2.37 trillion. This pool is distributed to EVERYONE as universal benefits.</p>
+
+                    <div class="highlight-box">
+                        <p>Think of it like social security - people who earned more pay in more, but everyone receives benefits. With PHIERS, people using prescriptions generate more savings, but everyone receives healthcare coverage and UBI.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-section">
+            <div class="category-header">🎯 THE CRISIS: Why RIGHT NOW?</div>
+
+            <div class="faq-item">
+                <div class="question">Why is this urgent? Why not wait until things stabilize?</div>
+                <div class="answer">
+                    <p><strong>Three simultaneous crises create the perfect opening - and perfect danger:</strong></p>
+
+                    <p><strong>Crisis #1: DOGE Destroys 1 Million Jobs (December 5, 2025)</strong></p>
+                    <ul>
+                        <li>Largest federal workforce reduction in 40+ years</li>
+                        <li>Contractors devastated</li>
+                        <li>People need solutions NOW, not someday</li>
+                        <li>PHIERS provides immediate transition support: healthcare + UBI + jobs</li>
+                    </ul>
+
+                    <p><strong>Crisis #2: Healthcare Costs Exploding</strong></p>
+                    <ul>
+                        <li>ACA subsidies expired, premiums up 200-300% for millions</li>
+                        <li>Even GOP Senator Josh Hawley admits "this is a crisis"</li>
+                        <li>Both parties know it's broken but have no solution</li>
+                        <li>PHIERS solves it using methods both sides can support</li>
+                    </ul>
+
+                    <p><strong>Crisis #3: Project 2025 Breaks 9 Systems</strong></p>
+                    <ul>
+                        <li>Healthcare, jobs, SNAP, economy, justice, community - all under attack</li>
+                        <li>Traditional piecemeal responses inadequate</li>
+                        <li>Need comprehensive solution that addresses ROOT CAUSES</li>
+                        <li>PHIERS provides systematic reconstruction</li>
+                    </ul>
+
+                    <div class="warning-box">
+                        <p style="font-weight: bold;">If we wait, conditions will worsen:</p>
+                        <ul>
+                            <li>More people lose jobs</li>
+                            <li>More families lose healthcare</li>
+                            <li>More SNAP recipients lose benefits</li>
+                            <li>More businesses close due to economic chaos</li>
+                            <li>Political violence escalates</li>
+                        </ul>
+                    </div>
+
+                    <div class="highlight-box">
+                        <p><strong>The moment demands bold action. The math is validated. The models are proven. The crisis is NOW. If we wait for "stability," we'll wait forever while conditions deteriorate.</strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-section">
+            <div class="category-header">🎯 HOW TO PARTICIPATE</div>
+
+            <div class="faq-item">
+                <div class="question">What do I need to do to join?</div>
+                <div class="answer">
+                    <p><strong>Three simple actions:</strong></p>
+
+                    <p><strong>1. Sign the Petition</strong></p>
+                    <ul>
+                        <li>Go to <a href="https://phierstorm.com">PHIERStorm.com</a></li>
+                        <li>Sign the petition to your elected officials</li>
+                        <li>Message: "Adopt PHIERS, show us something better, or we'll primary you in 2026"</li>
+                    </ul>
+
+                    <p><strong>2. Access Immediate Savings</strong></p>
+                    <ul>
+                        <li>Start using Mark Cuban Cost Plus for prescriptions (if you take any)</li>
+                        <li>Save 80-90% immediately</li>
+                        <li>No waiting required</li>
+                    </ul>
+
+                    <p><strong>3. Share With Others</strong></p>
+                    <ul>
+                        <li>Tell family, friends, coworkers</li>
+                        <li>Share on social media</li>
+                        <li>Forward this FAQ</li>
+                        <li>We need 3.5% (11.7 million Americans) - every person matters</li>
+                    </ul>
+
+                    <div class="highlight-box">
+                        <p style="font-weight: bold;">That's it. Sign petition, access savings, share with others. Simple actions creating collective power.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="question">I'm a union leader / community organizer / politician. How can I help?</div>
+                <div class="answer">
+                    <p><strong>You're exactly who we need.</strong> PHIERS provides the economic leverage your networks need to force real change.</p>
+
+                    <p><strong>For Union Leaders:</strong></p>
+                    <ul>
+                        <li>Your members need healthcare, job security, political power</li>
+                        <li>PHIERS delivers all three while strengthening unions</li>
+                        <li>Request custom union partnership briefing</li>
+                    </ul>
+
+                    <p><strong>For Community Organizers:</strong></p>
+                    <ul>
+                        <li>Your networks can mobilize 3.5% in key areas</li>
+                        <li>We provide the solution worth organizing around</li>
+                        <li>Request organizing resources and coalition briefing</li>
+                    </ul>
+
+                    <p><strong>For Politicians:</strong></p>
+                    <ul>
+                        <li>Your constituents need tangible relief, not just resistance</li>
+                        <li>PHIERS gives you something real to champion</li>
+                        <li>Request custom district analysis showing constituent savings</li>
+                    </ul>
+
+                    <p><strong>Contact:</strong></p>
+                    <p>Email: <a href="mailto:PHIERSconcept@gmail.com">PHIERSconcept@gmail.com</a></p>
+                    <p>Phone: (301) 390-7657</p>
+                    <p>We'll provide custom materials for your specific audience.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="back-link">
+            <a href="index.html" class="cta-button">← Back to Main Site</a>
+            <a href="https://phierstorm.com" class="cta-button">Sign Petition</a>
+            <a href="mailto:PHIERSconcept@gmail.com" class="cta-button">Contact Us</a>
+        </div>
+
+        <div style="background: rgba(255, 255, 255, 0.98); border-radius: 15px; padding: 30px; margin-top: 30px; text-align: center;">
+            <h2 style="color: #667eea; margin-bottom: 20px;">Still Have Questions?</h2>
+            <p style="font-size: 1.1rem; margin-bottom: 20px;">
+                We're here to help. Contact us directly:
+            </p>
+            <p><strong>Will Price</strong></p>
+            <p>Email: <a href="mailto:PHIERSconcept@gmail.com">PHIERSconcept@gmail.com</a></p>
+            <p>Phone: (301) 390-7657</p>
+            <p style="margin-top: 30px; font-style: italic; color: #718096;">
+                Let's MABAH. Together.
+            </p>
+        </div>
+
+        <div style="background: rgba(45, 55, 72, 0.98); color: white; padding: 20px; border-radius: 15px; margin-top: 30px; text-align: center;">
+            <p style="font-size: 0.9rem;">
+                © 2025 PHIERS.org | Making America Better And Healthier<br>
+                Updated: December 6, 2025
+            </p>
+        </div>
+    </div>
+</body>
+</html>
