@@ -3,97 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PHIERS FAQ - Questions & Answers About Affordable Healthcare</title>
+    <title>PHIERS FAQ - Questions & Answers</title>
+    <link rel="preload" as="image" href="PHIERS_Logo.png">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #2c3e50; }
-        .header { background: linear-gradient(135deg, #27ae60 0%, #1e8449 100%); color: white; padding: 60px 30px; text-align: center; }
-        .header h1 { font-size: 2.8em; margin-bottom: 20px; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #1f2937; }
+        
+        .header { 
+            background: linear-gradient(135deg, #065f46 0%, #047857 50%, #10b981 100%);
+            color: white; padding: 60px 30px; text-align: center;
+        }
+        .header img { max-width: 150px; margin-bottom: 20px; }
+        .header h1 { font-size: 2.8em; margin-bottom: 15px; }
+        
         .container { max-width: 900px; margin: 0 auto; padding: 60px 30px; }
-        .faq-item { margin-bottom: 40px; border-bottom: 1px solid #e0e0e0; padding-bottom: 30px; }
-        .faq-item:last-child { border-bottom: none; }
-        .faq-question { font-size: 1.2em; font-weight: 700; color: #27ae60; margin-bottom: 15px; cursor: pointer; }
-        .faq-answer { font-size: 1.05em; line-height: 1.8; color: #555; }
-        .cta-box { background: #f8f9fa; border-left: 5px solid #e74c3c; padding: 30px; margin: 40px 0; border-radius: 8px; }
-        .cta-button { display: inline-block; background: #27ae60; color: white; padding: 14px 35px; border-radius: 8px; text-decoration: none; font-weight: 700; margin-top: 15px; }
-        .cta-button:hover { background: #1e8449; }
-        .footer { background: #2c3e50; color: white; padding: 50px 30px; text-align: center; }
-        .footer-link { color: #27ae60; text-decoration: none; margin: 0 15px; }
-        .timestamp { font-size: 0.85em; color: #aaa; margin-top: 30px; padding-top: 20px; border-top: 1px solid #555; }
+        h2 { color: #065f46; font-size: 2.2em; margin-bottom: 40px; text-align: center; }
+        
+        .faq-item { 
+            margin-bottom: 30px; padding: 25px; border-radius: 8px;
+            background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+            border-left: 5px solid #10b981;
+        }
+        
+        .faq-question { font-size: 1.2em; font-weight: 700; color: #047857; margin-bottom: 12px; }
+        .faq-answer { font-size: 1.05em; line-height: 1.8; color: #374151; }
+        
+        .btn { display: inline-block; background: linear-gradient(135deg, #047857 0%, #10b981 100%); color: white; padding: 14px 35px; border-radius: 8px; text-decoration: none; font-weight: 700; margin-top: 15px; }
+        .btn:hover { transform: scale(1.05); }
+        
+        .footer { background: linear-gradient(135deg, #1f2937 0%, #111827 100%); color: white; padding: 50px 30px; text-align: center; }
+        .footer-links a { color: #10b981; text-decoration: none; margin: 0 15px; }
+        
         @media (max-width: 768px) {
-            .header h1 { font-size: 2em; }
-            .faq-question { font-size: 1.1em; }
+            .header h1 { font-size: 1.8em; }
+            .container { padding: 40px 20px; }
+            .faq-item { padding: 15px; }
         }
     </style>
 </head>
 <body>
     <div class="header">
-        <img src="PHIERS_Logo.png" alt="PHIERS Logo" style="max-width: 150px; margin-bottom: 20px;">
+        <img src="PHIERS_Logo.png" alt="PHIERS Logo" width="150" height="150">
         <h1>PHIERS FAQ</h1>
-        <p>Common Questions About Affordable Healthcare, Jobs & UBI</p>
+        <p>Common Questions About Healthcare, Jobs & UBI</p>
     </div>
-
+    
     <div class="container">
         <div class="faq-item">
             <div class="faq-question">Q: What is PHIERS?</div>
-            <div class="faq-answer">PHIERS (The People's Health Insurance Endowment & Referral Service) solves three things Congress says America needs with ONE system: affordable healthcare for individuals, AI-resistant jobs, and UBI monthly assistance. How? By allowing CMS to cover telehealth as a legitimate insurance alternative, which saves the federal government TRILLIONS annually. We contract with government to deliver those savings.</div>
+            <div class="faq-answer">PHIERS solves three things Congress wants with ONE system: affordable healthcare for individuals, AI-resistant jobs, and UBI. How? By allowing CMS to cover telehealth ($600/year vs $8,500+ insurance), saving TRILLIONS annually. We contract to deliver those savings.</div>
         </div>
-
+        
         <div class="faq-item">
             <div class="faq-question">Q: How much does telehealth cost vs traditional insurance?</div>
-            <div class="faq-answer">Traditional insurance: $8,500+/year individuals, $24,000+/year for higher-cost plans. PHIERS telehealth: $600/year. Individual saves $7,400-$23,400 annually. 80% of healthcare visits don't require hospitalization or specialty care—telehealth covers everything you actually need.</div>
+            <div class="faq-answer">Traditional: $8,500+/year individuals. PHIERS telehealth: $600/year. Individual saves $7,400-$23,400 annually. 80% of healthcare visits don't need hospitalization—telehealth covers everything you actually need.</div>
         </div>
-
+        
         <div class="faq-item">
-            <div class="faq-question">Q: Where does the TRILLIONS in savings come from?</div>
-            <div class="faq-answer">Federal healthcare spending: $1.8+ trillion annually (Medicare, Medicaid, federal employees, military). Private insurance market: $1.6+ trillion annually. If 234M individuals switch from expensive insurance to $600/year telehealth, federal government saves $1+ trillion. Private markets save $800B+. Pharmaceutical optimization (proven by Mark Cuban's model at 80-90% savings) adds hundreds of billions more. Total: $2+ TRILLION in annual savings.</div>
+            <div class="faq-question">Q: Where does TRILLIONS come from?</div>
+            <div class="faq-answer">Federal healthcare spending: $1.8+ trillion annually. Private insurance: $1.6+ trillion. If 234M individuals switch to $600/year telehealth, government saves $1+ TRILLION. Private markets save $800B+. Total: $2+ TRILLION in annual savings.</div>
         </div>
-
-        <div class="faq-item">
-            <div class="faq-question">Q: Are you replacing my current insurance?</div>
-            <div class="faq-answer">No. This is individual choice. If you prefer traditional insurance, that's your decision. But if Congress allows CMS to cover telehealth and you choose it, the government saves massive money—which we use to fund jobs, UBI, and housing for everyone.</div>
-        </div>
-
-        <div class="faq-item">
-            <div class="faq-question">Q: How will this fund 250K+ jobs?</div>
-            <div class="faq-answer">From government savings. Jobs in: community health, elder care, childcare, infrastructure, environmental remediation, food systems, education, public safety. Positions that require human judgment and cannot be automated. $18-40/hour. Funded entirely from savings—no new taxes.</div>
-        </div>
-
+        
         <div class="faq-item">
             <div class="faq-question">Q: When can this start?</div>
-            <div class="faq-answer">Congress is home Dec 16-31 (winter break). If we organize at scale and Congress allows CMS telehealth adoption, benefits can start flowing immediately. First members could begin receiving healthcare + job opportunities within weeks. Housing acquisition and UBI would follow within 2-3 months.</div>
+            <div class="faq-answer">Congress is home Dec 16-31. If we organize at scale and Congress allows CMS telehealth adoption, benefits can start immediately. First members could begin healthcare within weeks. Housing and UBI follow within 2-3 months.</div>
         </div>
-
+        
         <div class="faq-item">
             <div class="faq-question">Q: Is this proven to work?</div>
-            <div class="faq-answer">Yes. Mark Cuban's Cost Plus model: 7M individuals, 80-90% prescription savings, operational since 2022. ZORTT Healthcare: Real members, 60-70% cost reduction, operating 1+ year. Congress: Voted 231-195 when organized constituents demanded action. Chenoweth Research: 3.5% organized = guaranteed policy change. We target 100M+ (9x threshold). The math is PROVEN.</div>
-        </div>
-
-        <div class="faq-item">
-            <div class="faq-question">Q: Why is Congress home now so important?</div>
-            <div class="faq-answer">Representatives are in districts Dec 16-31 (winter break). Insurance premiums DOUBLE Dec 31. Government shuts down Jan 30. This 15-day window creates maximum constituent pressure while Congress is home and vulnerable. After Jan 31 when Congress returns to DC, the pressure window closes. This moment doesn't come back.</div>
-        </div>
-
-        <div class="cta-box">
-            <h3>Ready to Help?</h3>
-            <p>The article that reaches 55M people is the forcing function. When people understand the math, Congress cannot ignore us.</p>
-            <a href="https://www.gofundme.com/f/homeless-but-hopeful-affordable-healthcare-good-jobs-ubi" class="cta-button">Fund the Story on GoFundMe</a>
+            <div class="faq-answer">Yes. Mark Cuban's Cost Plus: 7M individuals, 80-90% savings. ZORTT Healthcare: Operational 1+ year, proven delivery. Congress voted 231-195 when organized. Chenoweth: 3.5% organized = guaranteed change. We target 100M+ (9x threshold).</div>
         </div>
     </div>
-
-    <div class="footer">
-        <p><strong>PHIERS.org — The People's Health Insurance Endowment & Referral Service</strong></p>
-        <p>Making America Better And Healthier (MABAH)</p>
-        <div>
-            <a href="https://phiers.org" class="footer-link">Home</a>
-            <a href="https://www.gofundme.com/f/homeless-but-hopeful-affordable-healthcare-good-jobs-ubi" class="footer-link">Fund Now</a>
-            <a href="https://discord.gg/narhDKJY" class="footer-link">Discord</a>
-        </div>
-        <div class="timestamp">
-            Last Updated: December 18, 2025 at 06:55:47 PM EST
-        </div>
     
-        <p style="font-size: 0.8em; color: #999; margin-top: 15px;">© 2025 PHIERS Movement | All Rights Reserved | Original Framework © 2014</p>
+    <div style="background: linear-gradient(135deg, #dcfce7 0%, #bbf7d0 100%); padding: 60px 30px; text-align: center;">
+        <div class="container">
+            <h2>Ready to Learn More?</h2>
+            <a href="https://phiers.org" class="btn">Visit PHIERS.org</a>
         </div>
-    </body>
+    </div>
+    
+    <div class="footer">
+        <div style="margin-bottom: 20px;">
+            <a href="https://phiers.org">PHIERS.org</a>
+            <a href="https://docs.google.com/document/d/1EWz90b6WPqusRfSChuk_IL4h_4TJJd9R/edit?usp=sharing">Download Ebook</a>
+            <a href="https://discord.gg/narhDKJY">Discord</a>
+        </div>
+        <p style="font-size: 0.8em; color: #9ca3af; margin-top: 15px;">© 2025 PHIERS Movement | All Rights Reserved | Original Framework © 2014</p>
+    </div>
+</body>
 </html>
