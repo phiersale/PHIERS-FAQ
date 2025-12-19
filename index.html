@@ -3,550 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PHIERS FAQ - Complete Answers to Common Questions</title>
-    <meta name="description" content="Frequently asked questions about PHIERS healthcare cooperative - breakthrough mechanism, proof, timeline, and how it works.">
+    <title>PHIERS FAQ - Questions & Answers About Affordable Healthcare</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        :root {
-            --primary-blue: #1e40af;
-            --accent-gold: #f59e0b;
-            --crisis-red: #dc2626;
-            --text-dark: #1f2937;
-            --text-light: #6b7280;
-            --bg-light: #f9fafb;
-        }
-        
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            line-height: 1.6;
-            color: var(--text-dark);
-            background: #ffffff;
-        }
-        
-        .header {
-            background: linear-gradient(135deg, var(--primary-blue) 0%, #1e3a8a 100%);
-            color: white;
-            padding: 3rem 1rem;
-            text-align: center;
-        }
-        
-        .header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-        
-        .header p {
-            font-size: 1.2rem;
-            opacity: 0.9;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 2rem 1rem;
-        }
-        
-        .intro {
-            background: var(--bg-light);
-            padding: 2rem;
-            border-radius: 12px;
-            margin-bottom: 3rem;
-            border-left: 4px solid var(--accent-gold);
-        }
-        
-        .faq-item {
-            margin-bottom: 2rem;
-            padding-bottom: 2rem;
-            border-bottom: 1px solid #e5e7eb;
-        }
-        
-        .faq-item:last-child {
-            border-bottom: none;
-        }
-        
-        .question {
-            font-size: 1.3rem;
-            font-weight: 600;
-            color: var(--primary-blue);
-            margin-bottom: 1rem;
-            cursor: pointer;
-            display: flex;
-            align-items: flex-start;
-        }
-        
-        .question::before {
-            content: "Q:";
-            color: var(--accent-gold);
-            font-weight: 700;
-            margin-right: 0.5rem;
-            flex-shrink: 0;
-        }
-        
-        .answer {
-            font-size: 1.05rem;
-            line-height: 1.7;
-            color: var(--text-dark);
-            padding-left: 2rem;
-        }
-        
-        .answer p {
-            margin-bottom: 1rem;
-        }
-        
-        .answer ul {
-            margin: 1rem 0 1rem 2rem;
-        }
-        
-        .answer li {
-            margin-bottom: 0.5rem;
-        }
-        
-        .answer strong {
-            color: var(--primary-blue);
-        }
-        
-        .highlight {
-            background: #fef3c7;
-            padding: 0.2rem 0.4rem;
-            border-radius: 4px;
-        }
-        
-        .urgent-box {
-            background: #fee2e2;
-            border-left: 4px solid var(--crisis-red);
-            padding: 1.5rem;
-            margin: 1rem 0;
-            border-radius: 8px;
-        }
-        
-        .action-box {
-            background: #dbeafe;
-            border-left: 4px solid var(--primary-blue);
-            padding: 1.5rem;
-            margin: 2rem 0;
-            border-radius: 8px;
-        }
-        
-        .action-box h3 {
-            color: var(--primary-blue);
-            margin-bottom: 1rem;
-        }
-        
-        .btn {
-            display: inline-block;
-            padding: 0.75rem 1.5rem;
-            background: var(--primary-blue);
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: 600;
-            transition: all 0.3s;
-            margin: 0.5rem 0.5rem 0.5rem 0;
-        }
-        
-        .btn:hover {
-            background: #1e3a8a;
-            transform: translateY(-2px);
-        }
-        
-        .btn-secondary {
-            background: var(--accent-gold);
-        }
-        
-        .btn-secondary:hover {
-            background: #d97706;
-        }
-        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #2c3e50; }
+        .header { background: linear-gradient(135deg, #27ae60 0%, #1e8449 100%); color: white; padding: 60px 30px; text-align: center; }
+        .header h1 { font-size: 2.8em; margin-bottom: 20px; }
+        .container { max-width: 900px; margin: 0 auto; padding: 60px 30px; }
+        .faq-item { margin-bottom: 40px; border-bottom: 1px solid #e0e0e0; padding-bottom: 30px; }
+        .faq-item:last-child { border-bottom: none; }
+        .faq-question { font-size: 1.2em; font-weight: 700; color: #27ae60; margin-bottom: 15px; cursor: pointer; }
+        .faq-answer { font-size: 1.05em; line-height: 1.8; color: #555; }
+        .cta-box { background: #f8f9fa; border-left: 5px solid #e74c3c; padding: 30px; margin: 40px 0; border-radius: 8px; }
+        .cta-button { display: inline-block; background: #27ae60; color: white; padding: 14px 35px; border-radius: 8px; text-decoration: none; font-weight: 700; margin-top: 15px; }
+        .cta-button:hover { background: #1e8449; }
+        .footer { background: #2c3e50; color: white; padding: 50px 30px; text-align: center; }
+        .footer-link { color: #27ae60; text-decoration: none; margin: 0 15px; }
+        .timestamp { font-size: 0.85em; color: #aaa; margin-top: 30px; padding-top: 20px; border-top: 1px solid #555; }
         @media (max-width: 768px) {
-            .header h1 {
-                font-size: 2rem;
-            }
-            
-            .question {
-                font-size: 1.1rem;
-            }
-            
-            .answer {
-                font-size: 1rem;
-                padding-left: 1rem;
-            }
+            .header h1 { font-size: 2em; }
+            .faq-question { font-size: 1.1em; }
         }
     </style>
 </head>
 <body>
     <div class="header">
-        <img src="PHIERS_Logo.png" alt="PHIERS Logo" style="max-width: 200px; height: auto; margin: 0 auto 1.5rem; display: block;">
         <h1>PHIERS FAQ</h1>
-        <p>Complete answers to common questions about the People's Health Insurance Endowment & Referral Service</p>
+        <p>Common Questions About Affordable Healthcare, Jobs & UBI</p>
     </div>
-    
+
     <div class="container">
-        <div class="intro">
-            <h2 style="color: var(--primary-blue); margin-bottom: 1rem;">Complete Transparency, No Hidden Risks</h2>
-            <p style="margin-bottom: 1rem;">We answer every objection honestly. No hiding risks. Complete transparency on pathways from today to comprehensive coverage at 3.5% participation.</p>
-            <p><strong>Updated: December 16, 2025</strong> - All information current with Congress winter break timeline and Dec 31 premium spike.</p>
-        </div>
-
-        <!-- BREAKTHROUGH MECHANISM -->
         <div class="faq-item">
-            <div class="question">How does the Rx→telehealth breakthrough loop work?</div>
-            <div class="answer">
-                <p><strong>This is the engine that makes PHIERS possible.</strong></p>
-                
-                <p>Every $50 saved on prescriptions (through Mark Cuban's Cost Plus Drug Company, which achieves 80-90% savings) funds the replacement of traditional insurance with telehealth coverage:</p>
-                
-                <ul>
-                    <li><strong>Traditional insurance costs:</strong> $8,000/year individual, $24,000/year families</li>
-                    <li><strong>Telehealth coverage costs:</strong> $600/year (for BOTH individuals AND families)</li>
-                    <li><strong>Savings per substitution:</strong> $7,400 individual, $23,400 family</li>
-                </ul>
-                
-                <p><strong>The Positive Reinforcement Loop:</strong></p>
-                
-                <p>Each substitution generates <em>thousands</em> in additional savings. Those savings fund MORE substitutions. Each new substitution creates MORE savings. This compounds rapidly.</p>
-                
-                <p><strong>Who this works for:</strong> 80% of Americans with public or private insurance don't need hospitalization or specialty care in a given year. They can use telehealth. That's why <span class="highlight">hundreds of millions will eventually join us</span>.</p>
-                
-                <p>This isn't theory. Mark Cuban's Cost Plus Drug Company serves 7 million customers RIGHT NOW with proven 80-90% prescription savings since 2022.</p>
-            </div>
+            <div class="faq-question">Q: What is PHIERS?</div>
+            <div class="faq-answer">PHIERS (The People's Health Insurance Endowment & Referral Service) solves three things Congress says America needs with ONE system: affordable healthcare for individuals, AI-resistant jobs, and UBI monthly assistance. How? By allowing CMS to cover telehealth as a legitimate insurance alternative, which saves the federal government TRILLIONS annually. We contract with government to deliver those savings.</div>
         </div>
 
-        <!-- WINTER BREAK URGENCY -->
         <div class="faq-item">
-            <div class="question">Why is timing so urgent right now?</div>
-            <div class="answer">
-                <div class="urgent-box">
-                    <p><strong>Congress is on winter break RIGHT NOW (through December 31st)</strong> and supposed to be accessible to constituents.</p>
-                </div>
-                
-                <p><strong>Three simultaneous forcing functions:</strong></p>
-                
-                <ul>
-                    <li><strong>December 31, 2025:</strong> Enhanced ACA subsidies expire. Premiums MORE THAN DOUBLE (114% increase from $888 to $1,904/year) for 22 million Americans starting January 1st.</li>
-                    <li><strong>Winter break accessibility:</strong> Representatives home in districts, vulnerable to constituent pressure at town halls and local events.</li>
-                    <li><strong>Prevention window:</strong> If we act fast enough and go VIRAL, we can actually PREVENT the healthcare cost spike entirely.</li>
-                </ul>
-                
-                <p><strong>The sooner people join the movement, the sooner we can hold Congress accountable for DIFFERENT decisions, BETTER decisions.</strong></p>
-                
-                <p>This isn't just about responding to the crisis—we can <em>stop it from happening</em> if we mobilize quickly enough. But we have 15 days.</p>
-            </div>
+            <div class="faq-question">Q: How much does telehealth cost vs traditional insurance?</div>
+            <div class="faq-answer">Traditional insurance: $8,500+/year individuals, $24,000+/year for higher-cost plans. PHIERS telehealth: $600/year. Individual saves $7,400-$23,400 annually. 80% of healthcare visits don't require hospitalization or specialty care—telehealth covers everything you actually need.</div>
         </div>
 
-        <!-- WHO IS WILL PRICE -->
         <div class="faq-item">
-            <div class="question">Who is Will Price and why should I trust him?</div>
-            <div class="answer">
-                <p><strong>Background:</strong></p>
-                
-                <p>Will Price has always been a public health advocate, working on solutions to strengthen the safety net. When his mentor and supporter became ill, he became their live-in caregiver.</p>
-                
-                <p>He witnessed abuse and endangerment. When he asked questions and protested, he was ejected from his position. That's how he became homeless.</p>
-                
-                <p>But he continues fighting for the solution he and his mentor started together—the solution that will help hundreds of millions of Americans.</p>
-                
-                <p><strong>Proven Predictive Accuracy:</strong></p>
-                
-                <ul>
-                    <li>Published concepts behind Mark Cuban's Cost Plus Drug Company in 2014—<em>years before Cuban launched</em></li>
-                    <li>Published concepts behind ZORTT Healthcare Cooperative in 2014—<em>years before they became operational</em></li>
-                    <li>Videos and documentation going back decades proving track record</li>
-                    <li>LinkedIn profile: <a href="https://www.linkedin.com/in/will-price-5801434/" target="_blank">linkedin.com/in/will-price-5801434</a></li>
-                </ul>
-                
-                <p><strong>Why trust him?</strong> His homelessness proves he's not in this for money. If he wanted profit, he could have walked away and pursued easier, more lucrative work. Instead, he chose principles over comfort, truth over safety, and the many over the few.</p>
-                
-                <p>He publishes everything publicly so others can prove his concepts work while he continues focusing on emerging threats. He's a 5D problem solver who can see what others see but solve problems no one else can solve.</p>
-            </div>
+            <div class="faq-question">Q: Where does the TRILLIONS in savings come from?</div>
+            <div class="faq-answer">Federal healthcare spending: $1.8+ trillion annually (Medicare, Medicaid, federal employees, military). Private insurance market: $1.6+ trillion annually. If 234M individuals switch from expensive insurance to $600/year telehealth, federal government saves $1+ trillion. Private markets save $800B+. Pharmaceutical optimization (proven by Mark Cuban's model at 80-90% savings) adds hundreds of billions more. Total: $2+ TRILLION in annual savings.</div>
         </div>
 
-        <!-- ARTICLE PUBLICATION -->
         <div class="faq-item">
-            <div class="question">How will the article get published?</div>
-            <div class="answer">
-                <p><strong>Pathos Communications (<a href="https://payonresultspr.com/" target="_blank">payonresultspr.com</a>) contacted Will</strong> about publishing his story.</p>
-                
-                <p>International Business Times wants it released ASAP. With $5,000 funding, the article will:</p>
-                
-                <ul>
-                    <li>Reach 55 million monthly readers</li>
-                    <li>Publish during the December 31st crisis (maximum impact timing)</li>
-                    <li>Drive petition signatures and mobilization</li>
-                    <li>Validate legitimacy through professional publication</li>
-                    <li>Create media momentum that forces Congressional attention</li>
-                </ul>
-                
-                <p>This isn't Will pitching to publications. <strong>They came to him</strong> because the story is newsworthy, timely, and impactful.</p>
-            </div>
+            <div class="faq-question">Q: Are you replacing my current insurance?</div>
+            <div class="faq-answer">No. This is individual choice. If you prefer traditional insurance, that's your decision. But if Congress allows CMS to cover telehealth and you choose it, the government saves massive money—which we use to fund jobs, UBI, and housing for everyone.</div>
         </div>
 
-        <!-- CONGRESS ACCOUNTABILITY -->
         <div class="faq-item">
-            <div class="question">What happens to politicians who refuse to support PHIERS?</div>
-            <div class="answer">
-                <p><strong>At 3.5% participation (Erica Chenoweth's threshold for guaranteed systemic change), we have mathematical leverage politicians cannot escape.</strong></p>
-                
-                <p><strong>The math:</strong></p>
-                <ul>
-                    <li>100M+ Americans = 32% organized = <strong>9x the proven 3.5% threshold</strong></li>
-                    <li>$1.95 billion minimum per Congressional district</li>
-                    <li>400:1 advantage over corporate lobbying ($8.5M average)</li>
-                </ul>
-                
-                <p><strong>Politicians face three choices:</strong></p>
-                
-                <ol>
-                    <li><strong>✅ Adopt PHIERS:</strong> Deliver $1.95+ billion in district savings, be celebrated as heroes who served constituents over corporate donors</li>
-                    <li><strong>⚠️ Show us something better:</strong> Present an alternative that delivers equivalent savings and benefits. We'll consider it honestly.</li>
-                    <li><strong>❌ Refuse:</strong> Explain to voters why you're blocking $1.95 billion in savings while taking corporate money, then face consequences</li>
-                </ol>
-                
-                <p><strong>The consequences:</strong></p>
-                
-                <ul>
-                    <li><strong>Primary challenges:</strong> Funded by cooperative savings with candidates committed to delivering what voters demand</li>
-                    <li><strong>Special elections:</strong> If it's obvious representatives are crooked and working AGAINST constituents, we can launch special elections BEFORE the 2026 general election</li>
-                    <li><strong>Permanent accountability record:</strong> Survey data creates publicly-tracked database of what voters actually want vs. how representatives vote</li>
-                </ul>
-                
-                <p class="highlight"><strong>Use PHIERS, offer something better, or prepare to step aside.</strong></p>
-                
-                <p>At 3.5%, this stops being a request and becomes mathematical inevitability.</p>
-            </div>
+            <div class="faq-question">Q: How will this fund 250K+ jobs?</div>
+            <div class="faq-answer">From government savings. Jobs in: community health, elder care, childcare, infrastructure, environmental remediation, food systems, education, public safety. Positions that require human judgment and cannot be automated. $18-40/hour. Funded entirely from savings—no new taxes.</div>
         </div>
 
-        <!-- PROOF -->
         <div class="faq-item">
-            <div class="question">What proof do you have that this actually works?</div>
-            <div class="answer">
-                <p><strong>Every component is validated at scale right now:</strong></p>
-                
-                <p><strong>💊 Mark Cuban's Cost Plus Drug Company</strong></p>
-                <ul>
-                    <li>7 million customers TODAY</li>
-                    <li>80-90% prescription savings</li>
-                    <li>Operational since 2022</li>
-                    <li>PROVES pharmaceutical affordability model WORKS</li>
-                </ul>
-                
-                <p><strong>🏥 ZORTT Healthcare Cooperative</strong></p>
-                <ul>
-                    <li>Operational member-owned telehealth RIGHT NOW</li>
-                    <li>Serving real members affordably</li>
-                    <li>PROVES cooperative delivery model WORKS</li>
-                </ul>
-                
-                <p><strong>⚖️ Federal Workers Union Victory</strong></p>
-                <ul>
-                    <li>Congress voted 231-195 to rescind Trump's override when workers organized</li>
-                    <li>PROVES Congress RESPONDS to organized pressure</li>
-                </ul>
-                
-                <p><strong>📊 Erica Chenoweth Research (Harvard)</strong></p>
-                <ul>
-                    <li>30+ years of peer-reviewed data</li>
-                    <li>3.5% organized population = guaranteed systemic change</li>
-                    <li>We have 100M+ Americans = 32% = 9x the threshold</li>
-                    <li>PROVES mathematical certainty of success</li>
-                </ul>
-                
-                <p><strong>🔢 The Leverage Math</strong></p>
-                <ul>
-                    <li>100M+ Americans affected by healthcare crisis</li>
-                    <li>$850B pharmaceutical industry at stake</li>
-                    <li>÷ 435 Congressional districts = <strong>$1.95B per district minimum</strong></li>
-                    <li>vs. $8.5M average corporate lobbying = <strong>400:1 advantage</strong></li>
-                    <li>PROVES Congress cannot refuse this math</li>
-                </ul>
-                
-                <p>This isn't theory. This is proven operational reality that Will correctly predicted years before companies launched.</p>
-            </div>
+            <div class="faq-question">Q: When can this start?</div>
+            <div class="faq-answer">Congress is home Dec 16-31 (winter break). If we organize at scale and Congress allows CMS telehealth adoption, benefits can start flowing immediately. First members could begin receiving healthcare + job opportunities within weeks. Housing acquisition and UBI would follow within 2-3 months.</div>
         </div>
 
-        <!-- VA JOB CUTS -->
         <div class="faq-item">
-            <div class="question">What about the 30,000 VA jobs Trump is eliminating?</div>
-            <div class="answer">
-                <p>The Trump administration is destroying 30,000 Veterans Affairs jobs (<a href="https://www.cnbc.com/2025/12/13/trump-us-veterans-affairs-plans-job-cuts-washington-post.html" target="_blank">source: CNBC</a>).</p>
-                
-                <p><strong>PHIERS can absorb these displaced workers</strong> into AI-resistant community health roles:</p>
-                
-                <ul>
-                    <li>Community health workers</li>
-                    <li>Home health aides</li>
-                    <li>Mental health counselors</li>
-                    <li>Case managers</li>
-                    <li>Veterans support specialists</li>
-                </ul>
-                
-                <p>These are exactly the jobs PHIERS creates—AI-resistant positions requiring human judgment, funded by healthcare cooperative savings.</p>
-                
-                <p><strong>This honors our commitment to veterans</strong> while strengthening the safety net for all Americans. When the government breaks promises, cooperative economics keeps them.</p>
-            </div>
+            <div class="faq-question">Q: Is this proven to work?</div>
+            <div class="faq-answer">Yes. Mark Cuban's Cost Plus model: 7M individuals, 80-90% prescription savings, operational since 2022. ZORTT Healthcare: Real members, 60-70% cost reduction, operating 1+ year. Congress: Voted 231-195 when organized constituents demanded action. Chenoweth Research: 3.5% organized = guaranteed policy change. We target 100M+ (9x threshold). The math is PROVEN.</div>
         </div>
 
-        <!-- WHEN LAUNCH -->
         <div class="faq-item">
-            <div class="question">When will PHIERS actually launch and start providing benefits?</div>
-            <div class="answer">
-                <p><strong>We can start IMMEDIATELY once we hit critical mass.</strong></p>
-                
-                <p><strong>Immediate action capability:</strong></p>
-                
-                <ul>
-                    <li><strong>Potentially next week</strong> if the article publishes and people sign up</li>
-                    <li>Every $50 in Rx savings sponsors placement of people into lower-cost telehealth insurance</li>
-                    <li>We save CMS thousands per substitution through NGO-led cooperative solution</li>
-                    <li>Benefits begin flowing as soon as negotiating power is established</li>
-                </ul>
-                
-                <p><strong>Why it's fast:</strong></p>
-                
-                <p>Once we have negotiating power through petition signatures and membership, Mark Cuban and ZORTT will appreciate the traffic we drive to their platforms. This makes us worthy of:</p>
-                
-                <ul>
-                    <li>Contracts (bulk purchasing agreements)</li>
-                    <li>Performance-based grants</li>
-                    <li>Donations to support public entity mission</li>
-                    <li>"Investment" in improving the human condition</li>
-                </ul>
-                
-                <p><strong>Timeline milestones:</strong></p>
-                
-                <ul>
-                    <li><strong>NOW - Dec 31:</strong> Petition/survey collection during winter break</li>
-                    <li><strong>January 2026:</strong> Article publication, town hall pressure, organizing momentum</li>
-                    <li><strong>January 30:</strong> Government shutdown deadline creates negotiation leverage</li>
-                    <li><strong>March 2026:</strong> Congressional framework expected</li>
-                    <li><strong>Benefits:</strong> Can start LONG before March if we mobilize quickly</li>
-                </ul>
-                
-                <p>This isn't a distant dream. <strong>We can deliver measurable positive results immediately</strong> if we act now.</p>
-            </div>
+            <div class="faq-question">Q: Why is Congress home now so important?</div>
+            <div class="faq-answer">Representatives are in districts Dec 16-31 (winter break). Insurance premiums DOUBLE Dec 31. Government shuts down Jan 30. This 15-day window creates maximum constituent pressure while Congress is home and vulnerable. After Jan 31 when Congress returns to DC, the pressure window closes. This moment doesn't come back.</div>
         </div>
 
-        <!-- WHAT IF I GET IN ACCIDENT -->
-        <div class="faq-item">
-            <div class="question">What if I get in an accident or have a medical emergency?</div>
-            <div class="answer">
-                <p><strong>Honest answer: Risk pathways and your choices.</strong></p>
-                
-                <p><strong>PHIERS telehealth ($600/year) covers:</strong></p>
-                <ul>
-                    <li>Primary care consultations</li>
-                    <li>Prescription management (with Cuban Cost Plus savings)</li>
-                    <li>Mental health services</li>
-                    <li>Preventive care guidance</li>
-                    <li>Chronic condition management</li>
-                </ul>
-                
-                <p><strong>What it doesn't cover:</strong> Emergency hospitalization, surgery, specialty procedures requiring facility care.</p>
-                
-                <p><strong>Your risk management options:</strong></p>
-                
-                <ol>
-                    <li><strong>Pure telehealth ($600/year):</strong> Accept emergency risk, save $7,400+ annually. If emergency occurs, negotiate payment plans or apply for hospital charity care.</li>
-                    
-                    <li><strong>Catastrophic coverage add-on:</strong> Keep high-deductible emergency insurance ($2,000-3,000/year) + PHIERS telehealth. Still save $4,000-5,000/year vs. traditional insurance.</li>
-                    
-                    <li><strong>Traditional insurance (for high-risk individuals):</strong> If you have chronic conditions requiring hospitalization, keep traditional coverage. PHIERS savings from others subsidize YOUR premiums at scale.</li>
-                </ol>
-                
-                <p><strong>At 3.5% participation:</strong> Cooperative savings are large enough to subsidize traditional insurance for people who genuinely need it. The 80% who don't need hospitalization fund coverage for the 20% who do.</p>
-                
-                <p><strong>Your choice:</strong> Evaluate your health status, risk tolerance, and savings priorities. PHIERS gives options—it's not one-size-fits-all.</p>
-            </div>
-        </div>
-
-        <!-- IS THIS SOCIALISM -->
-        <div class="faq-item">
-            <div class="question">Is this socialism?</div>
-            <div class="answer">
-                <p><strong>No. This is cooperative capitalism.</strong></p>
-                
-                <p><strong>What PHIERS is:</strong></p>
-                <ul>
-                    <li>Member-owned cooperative (like credit unions, REI, agricultural co-ops)</li>
-                    <li>You own your share</li>
-                    <li>Profits return to members, not shareholders</li>
-                    <li>Free market competition forces better service</li>
-                    <li>Zero government ownership or control</li>
-                </ul>
-                
-                <p><strong>What PHIERS is NOT:</strong></p>
-                <ul>
-                    <li>Government-run healthcare</li>
-                    <li>Single-payer system</li>
-                    <li>Tax-funded program</li>
-                    <li>Mandated participation</li>
-                </ul>
-                
-                <p><strong>This is as American as apple pie.</strong> Cooperatives have existed in America for over 100 years. They represent free association, voluntary participation, and democratic member control.</p>
-                
-                <p>The difference between cooperatives and corporations: cooperatives prioritize member benefit over shareholder profit. That's capitalism serving people instead of extracting from them.</p>
-            </div>
-        </div>
-
-        <!-- WHY NOT ESTABLISHED ORGS -->
-        <div class="faq-item">
-            <div class="question">Why you instead of established healthcare organizations?</div>
-            <div class="answer">
-                <p><strong>Will's entire adult career has been dedicated to solving these problems, with videos and documentation going back decades.</strong></p>
-                
-                <p><strong>Why established organizations haven't solved this:</strong></p>
-                
-                <p>Will and his team have been pursued by, partnered with, and then <em>sabotaged</em> by health systems, insurance plans, pharmaceutical companies, and professional associations when they realized PHIERS would eliminate the profit motive in healthcare.</p>
-                
-                <p>They wouldn't get rich with these ideas, so they killed partnerships.</p>
-                
-                <p><strong>That's why Will publishes everything publicly</strong>—so others can prove his concepts work (like Cuban and ZORTT did) while he continues focusing on emerging threats.</p>
-                
-                <p><strong>Established organizations:</strong></p>
-                <ul>
-                    <li>Move slowly (bureaucracy, committees, approvals)</li>
-                    <li>Compromise constantly (donors, board members, corporate interests)</li>
-                    <li>Answer to funders, not members</li>
-                    <li>Avoid disrupting profitable systems</li>
-                </ul>
-                
-                <p><strong>Will is answerable only to the 100+ million Americans who need this.</strong></p>
-                
-                <p>Sometimes the warrior is the homeless guy with the right strategy. He can see what others see but solve problems no one else can solve as a 5D strategist.</p>
-            </div>
-        </div>
-
-        <!-- ACTION BOX -->
-        <div class="action-box">
-            <h3>🚀 Take Action NOW</h3>
-            <p style="margin-bottom: 1.5rem;"><strong>Congress winter break through Dec 31. If we act fast, we can prevent the premium spike.</strong></p>
-            
-            <a href="https://docs.google.com/forms/d/1MYeQcmw8ZDXHwcjpEw5hbQCWP4FdHdyoHTo1XcAiTRA/edit" target="_blank" class="btn">📝 Sign Petition</a>
-            
-            <a href="https://docs.google.com/forms/d/1phABxQeHga26-k5ccxgL3lIZTjnyK1LsyT0zFeqMTQA/edit" target="_blank" class="btn">📊 Complete Survey</a>
-            
-            <a href="https://www.gofundme.com/f/homeless-but-hopeful-affordable-healthcare-good-jobs-ubi" target="_blank" class="btn btn-secondary">💰 Fund Article + Will's Survival</a>
-            
-            <a href="https://phiers.org" target="_blank" class="btn">🌐 Full Details at PHIERS.org</a>
-            
-            <a href="https://discord.gg/narhDKJY" target="_blank" class="btn">💬 Join Discord Community</a>
-        </div>
-
-        <div style="text-align: center; margin-top: 3rem; padding: 2rem; background: var(--bg-light); border-radius: 12px;">
-            <p style="font-size: 1.2rem; font-weight: 600; color: var(--text-dark); margin-bottom: 1rem;">
-                Have more questions?
-            </p>
-            <p style="color: var(--text-light);">
-                Contact: <a href="mailto:contact@phiers.org">contact@phiers.org</a><br>
-                Or ask in our Discord community
-            </p>
+        <div class="cta-box">
+            <h3>Ready to Help?</h3>
+            <p>The article that reaches 55M people is the forcing function. When people understand the math, Congress cannot ignore us.</p>
+            <a href="https://www.gofundme.com/f/homeless-but-hopeful-affordable-healthcare-good-jobs-ubi" class="cta-button">Fund the Story on GoFundMe</a>
         </div>
     </div>
-</body>
+
+    <div class="footer">
+        <p><strong>PHIERS.org — The People's Health Insurance Endowment & Referral Service</strong></p>
+        <p>Making America Better And Healthier (MABAH)</p>
+        <div>
+            <a href="https://phiers.org" class="footer-link">Home</a>
+            <a href="https://www.gofundme.com/f/homeless-but-hopeful-affordable-healthcare-good-jobs-ubi" class="footer-link">Fund Now</a>
+            <a href="https://discord.gg/narhDKJY" class="footer-link">Discord</a>
+        </div>
+        <div class="timestamp">
+            Last Updated: December 18, 2025 at 06:55:47 PM EST
+        </div>
+    
+        <p style="font-size: 0.8em; color: #999; margin-top: 15px;">© 2025 PHIERS Movement | All Rights Reserved | Original Framework © 2014</p>
+        </div>
+    </body>
 </html>
