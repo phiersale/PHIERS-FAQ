@@ -3,94 +3,704 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PHIERS FAQ - Questions & Answers</title>
-    <link rel="preload" as="image" href="PHIERS_Logo.png">
+    <title>PHIERS Deep Dive FAQ - Complete Comprehensive Questions & Answers</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #1f2937; }
-        
-        .header { 
-            background: linear-gradient(135deg, #065f46 0%, #047857 50%, #10b981 100%);
-            color: white; padding: 60px 30px; text-align: center;
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.8;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            padding: 20px;
         }
-        .header img { max-width: 150px; margin-bottom: 20px; }
-        .header h1 { font-size: 2.8em; margin-bottom: 15px; }
-        
-        .container { max-width: 900px; margin: 0 auto; padding: 60px 30px; }
-        h2 { color: #065f46; font-size: 2.2em; margin-bottom: 40px; text-align: center; }
-        
-        .faq-item { 
-            margin-bottom: 30px; padding: 25px; border-radius: 8px;
-            background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
-            border-left: 5px solid #10b981;
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            padding: 50px 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
         }
-        
-        .faq-question { font-size: 1.2em; font-weight: 700; color: #047857; margin-bottom: 12px; }
-        .faq-answer { font-size: 1.05em; line-height: 1.8; color: #374151; }
-        
-        .btn { display: inline-block; background: linear-gradient(135deg, #047857 0%, #10b981 100%); color: white; padding: 14px 35px; border-radius: 8px; text-decoration: none; font-weight: 700; margin-top: 15px; }
-        .btn:hover { transform: scale(1.05); }
-        
-        .footer { background: linear-gradient(135deg, #1f2937 0%, #111827 100%); color: white; padding: 50px 30px; text-align: center; }
-        .footer-links a { color: #10b981; text-decoration: none; margin: 0 15px; }
-        
+        .header {
+            text-align: center;
+            border-bottom: 3px solid #4caf50;
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+        }
+        .header h1 {
+            color: #2c3e50;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        .header .tagline {
+            font-size: 1.3em;
+            color: #4caf50;
+            font-weight: bold;
+        }
+        .section-title {
+            color: #4caf50;
+            font-size: 1.8em;
+            margin-top: 50px;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #4caf50;
+        }
+        .faq-item {
+            margin-bottom: 35px;
+            border-left: 5px solid #4caf50;
+            padding-left: 25px;
+        }
+        .question {
+            font-weight: bold;
+            font-size: 1.2em;
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+        .answer {
+            color: #555;
+            line-height: 1.9;
+        }
+        .highlight {
+            background: #e8f5e8;
+            border-left: 4px solid #16a34a;
+            padding: 18px;
+            margin: 18px 0;
+            border-radius: 6px;
+        }
+        .crisis-box {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 18px;
+            margin: 18px 0;
+            border-radius: 6px;
+        }
+        .number-box {
+            background: #d1ecf1;
+            border-left: 4px solid #17a2b8;
+            padding: 18px;
+            margin: 18px 0;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+        .crisis-alert {
+            background: linear-gradient(45deg, #e74c3c, #c0392b);
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            margin-bottom: 20px;
+            font-weight: bold;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.95; }
+        }
+        .crisis-highlight {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 18px;
+            margin: 18px 0;
+            border-radius: 6px;
+        }
+        ul, ol { margin: 15px 0 15px 25px; }
+        li { margin-bottom: 12px; line-height: 1.7; }
+        .back-button {
+            display: block;
+            margin: 40px auto 0;
+            background: #4caf50;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background 0.3s;
+        }
+        .back-button:hover {
+            background: #45a049;
+        }
+        .deep-dive-toggle {
+            display: block;
+            margin: 30px auto;
+            background: #667eea;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .deep-dive-toggle:hover {
+            background: #5568d3;
+        }
         @media (max-width: 768px) {
+            .container { padding: 25px 20px; }
             .header h1 { font-size: 1.8em; }
-            .container { padding: 40px 20px; }
-            .faq-item { padding: 15px; }
+            .section-title { font-size: 1.4em; }
+            .question { font-size: 1.05em; }
         }
     </style>
 </head>
 <body>
-    <div class="header">
-        <img src="PHIERS_Logo.png" alt="PHIERS Logo" width="150" height="150">
-        <h1>PHIERS FAQ</h1>
-        <p>Common Questions About Healthcare, Jobs & UBI</p>
-    </div>
-    
     <div class="container">
-        <div class="faq-item">
-            <div class="faq-question">Q: What is PHIERS?</div>
-            <div class="faq-answer">PHIERS solves three things Congress wants with ONE system: affordable healthcare for individuals, AI-resistant jobs, and UBI. How? By allowing CMS to cover telehealth ($600/year vs $8,500+ insurance), saving TRILLIONS annually. We contract to deliver those savings.</div>
+        <div class="crisis-alert">
+            🚨 CRISIS CONVERGENCE: Political Violence + Authoritarianism + Economic Warfare + Election Rigging + Government Shutdown 🚨
         </div>
-        
-        <div class="faq-item">
-            <div class="faq-question">Q: How much does telehealth cost vs traditional insurance?</div>
-            <div class="faq-answer">Traditional: $8,500+/year individuals. PHIERS telehealth: $600/year. Individual saves $7,400-$23,400 annually. 80% of healthcare visits don't need hospitalization—telehealth covers everything you actually need.</div>
+
+        <div style="background: #ecf0f1; padding: 12px; border-radius: 8px; text-align: center; margin-bottom: 20px; color: #2c3e50; font-weight: bold; font-size: 0.95em;">
+            <strong>⏱️ UPDATED: December 29, 2025, 10:56 AM PST</strong>
+            <div style="font-size: 0.85em; font-weight: normal; margin-top: 5px; color: #555;">Added 6 critical crisis questions + comprehensive deep dive</div>
         </div>
-        
-        <div class="faq-item">
-            <div class="faq-question">Q: Where does TRILLIONS come from?</div>
-            <div class="faq-answer">Federal healthcare spending: $1.8+ trillion annually. Private insurance: $1.6+ trillion. If 234M individuals switch to $600/year telehealth, government saves $1+ TRILLION. Private markets save $800B+. Total: $2+ TRILLION in annual savings.</div>
+
+        <div class="header">
+            <h1>PHIERS FAQ</h1>
+            <p class="tagline">(pronounced "FIRES" - Make America Better and Healthier)</p>
+            <p><strong>Economic Solutions Forcing Congressional Accountability</strong></p>
+            <p><strong>Individual Empowerment Beyond Both Failed Parties</strong></p>
         </div>
-        
+
+        <!-- QUICK QUESTIONS -->
+        <h2 class="section-title">Quick Questions (Start Here)</h2>
+
         <div class="faq-item">
-            <div class="faq-question">Q: When can this start?</div>
-            <div class="faq-answer">Congress is home Dec 16-31. If we organize at scale and Congress allows CMS telehealth adoption, benefits can start immediately. First members could begin healthcare within weeks. Housing and UBI follow within 2-3 months.</div>
+            <div class="question">Q: How much does PHIERS healthcare cost?</div>
+            <div class="answer">
+                <p><strong>$600/year</strong> for comprehensive telehealth access to 80% of healthcare needs.</p>
+                <div class="number-box">
+                    Traditional insurance: $8,500+ per year<br>
+                    PHIERS telehealth: $600 per year<br>
+                    Individual savings: $7,400 - $23,400 annually
+                </div>
+            </div>
         </div>
-        
+
         <div class="faq-item">
-            <div class="faq-question">Q: Is this proven to work?</div>
-            <div class="faq-answer">Yes. Mark Cuban's Cost Plus: 7M individuals, 80-90% savings. ZORTT Healthcare: Operational 1+ year, proven delivery. Congress voted 231-195 when organized. Chenoweth: 3.5% organized = guaranteed change. We target 100M+ (9x threshold).</div>
+            <div class="question">Q: Is this really proven to work?</div>
+            <div class="answer">
+                <p><strong>Yes. Three independent validations:</strong></p>
+                <ul style="margin: 15px 0 0 20px;">
+                    <li><strong>Mark Cuban's Cost Plus Drugs:</strong> 7 million customers, 80-90% savings, 200+ pharmacies operational</li>
+                    <li><strong>ZORTT Elite Medical:</strong> Cooperative healthcare delivery operational 2+ years with real members</li>
+                    <li><strong>Erica Chenoweth (Harvard):</strong> 3.5% organized population = guaranteed systemic change. We have 100M+ = 9x threshold</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="question">Q: What jobs get created?</div>
+            <div class="answer">
+                <p>Millions of AI-resistant, human-centered positions:</p>
+                <ul style="margin: 15px 0 0 20px;">
+                    <li>Case managers helping people navigate healthcare</li>
+                    <li>Health coordinators connecting patients with services</li>
+                    <li>Community health workers preventing crises</li>
+                    <li>Logistics coordinators managing supply chains</li>
+                    <li>Training coordinators teaching communities about health</li>
+                </ul>
+                <p style="margin-top: 15px;"><strong>Why AI-resistant?</strong> These require human judgment, empathy, and trust that AI cannot replicate.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="question">Q: How much money does PHIERS save?</div>
+            <div class="answer">
+                <div class="number-box">
+                    $2.73 TRILLION annually in documented savings<br>
+                    (Government + private insurance sector)<br>
+                    <br>
+                    That's 136x more than Trump's current healthcare plan
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="question">Q: Where does that money come from?</div>
+            <div class="answer">
+                <p><strong>Replacing expensive, inefficient systems with efficient ones:</strong></p>
+                <ul style="margin: 15px 0 0 20px;">
+                    <li><strong>Traditional insurance:</strong> $8,500+/year (includes massive profit margins, overhead)</li>
+                    <li><strong>PHIERS telehealth:</strong> $600/year (direct service delivery, minimal overhead)</li>
+                    <li><strong>Difference:</strong> $7,400+ per person × 100M+ = $2.73T+ total savings</li>
+                </ul>
+                <p style="margin-top: 15px;"><strong>No tax increases. No new debt. Just better business models.</strong></p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="question">Q: Why hasn't Congress approved this already?</div>
+            <div class="answer">
+                <p><strong>Because pharmaceutical lobbies profit from current system:</strong></p>
+                <div class="crisis-box">
+                    <ul style="margin: 0; padding-left: 20px;">
+                        <li>Pharmaceutical industry profits: $1.2+ trillion annually</li>
+                        <li>Insurance company profits: $800B+ annually</li>
+                        <li>These industries lobby Congress to prevent change</li>
+                        <li>PHIERS eliminates their profit extraction model</li>
+                    </ul>
+                </div>
+                <p style="margin-top: 15px;"><strong>Congress chooses donors over constituents - until constituent pressure makes serving donors expensive.</strong></p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="question">Q: How does PHIERS stop election rigging happening RIGHT NOW in Texas and Missouri?</div>
+            <div class="answer">
+                <p><strong>Economic pressure stops theft BEFORE voting - not hoping courts fix it afterward.</strong></p>
+                <div class="crisis-highlight">
+                    <strong>Current Election Theft:</strong>
+                    <ul style="margin: 0; padding-left: 20px;">
+                        <li><strong>Texas:</strong> Stealing 5 congressional seats through mid-cycle redistricting</li>
+                        <li><strong>Missouri:</strong> Requiring constitutional amendments pass in ALL 8 districts vs statewide majority</li>
+                        <li><strong>Pattern expanding:</strong> Similar schemes in Ohio, Indiana, Florida while 300+ protests lack enforcement power</li>
+                    </ul>
+                </div>
+                <div class="highlight">
+                    <strong>VHIERSMovement Economic Enforcement:</strong>
+                    <ul style="margin: 15px 0 0 20px;">
+                        <li><strong>Mathematical pressure:</strong> Representatives face $1.95+ billion per district consequences</li>
+                        <li><strong>Primary challenge funding:</strong> Coalition savings create credible electoral threats</li>
+                        <li><strong>Virtual town halls:</strong> Forcing representatives to explain vote theft support publicly</li>
+                        <li><strong>Permanent accountability:</strong> All responses documented for electoral consequences</li>
+                    </ul>
+                </div>
+                <p style="margin-top: 15px;"><strong>Massive protests + zero economic consequences = ignored. Mathematical leverage = representatives cannot afford rigging support.</strong></p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="question">Q: How does PHIERS address Charlie Kirk assassination and political violence escalation?</div>
+            <div class="answer">
+                <p><strong>PHIERS addresses ROOT CAUSES of political violence, not just symptoms.</strong></p>
+                <div class="crisis-highlight">
+                    <strong>Why Political Violence Happens:</strong>
+                    <ul style="margin: 0; padding-left: 20px;">
+                        <li>Economic desperation + political powerlessness = vulnerability to extremism</li>
+                        <li>Tyler Robinson assassination (far-right killing Kirk) proves manufactured division collapsed</li>
+                        <li>When people feel voiceless and economically insecure, some resort to desperate measures</li>
+                    </ul>
+                </div>
+                <div class="highlight">
+                    <strong>How PHIERS Prevents Violence:</strong>
+                    <ul style="margin: 15px 0 0 20px;">
+                        <li><strong>Mathematical leverage:</strong> $1.95+ billion per district gives people ACTUAL power</li>
+                        <li><strong>Economic security:</strong> 80-90% prescription savings reduce desperation across ALL political spectrum</li>
+                        <li><strong>Virtual democracy:</strong> Safe participation during dangerous physical confrontation risks</li>
+                        <li><strong>Community building:</strong> PHIERPlace prevents dangerous isolation fueling extremism</li>
+                    </ul>
+                </div>
+                <p style="margin-top: 15px;"><strong>When people have economic power and safe democratic engagement, political violence becomes unnecessary across political spectrum.</strong></p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="question">Q: Both parties failed - why trust PHIERS over failed political movements?</div>
+            <div class="answer">
+                <p><strong>We're not asking for trust - we provide OPERATIONAL PROOF during actual crisis.</strong></p>
+                <div class="highlight">
+                    <strong>Business Validation During Crisis:</strong>
+                    <ul style="margin: 15px 0 0 20px;">
+                        <li><strong>Cuban Cost Plus:</strong> 200+ pharmacies operational NOW, 80-90% savings proven</li>
+                        <li><strong>ZORTT Elite Medical:</strong> Cooperative benefits delivery working with real members</li>
+                        <li><strong>Mathematical reality:</strong> $1.95+ billion per district baseline vs $3.7B corporate lobbying across ALL districts</li>
+                    </ul>
+                </div>
+                <p style="margin-top: 15px;"><strong>Unlike both failed parties promising change through theater, PHIERS delivers immediate relief through PROVEN BUSINESS MODELS during actual crisis.</strong></p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="question">Q: How does virtual democracy work during surveillance expansion?</div>
+            <div class="answer">
+                <p><strong>Safe coordination providing maximum democratic impact without physical exposure risks.</strong></p>
+                <div class="crisis-highlight">
+                    <strong>Authoritarian Threats:</strong>
+                    <ul style="margin: 0; padding-left: 20px;">
+                        <li>Civil rights offices closed, "vigilante portals" expanding surveillance</li>
+                        <li>Constitutional protections systematically eliminated</li>
+                        <li>Physical protests vulnerable to infiltration, surveillance, and retaliation</li>
+                    </ul>
+                </div>
+                <div class="highlight">
+                    <strong>PHIERS Virtual Democracy Advantages:</strong>
+                    <ul style="margin: 15px 0 0 20px;">
+                        <li><strong>Privacy protection:</strong> Economic leverage without personal targeting</li>
+                        <li><strong>Geographic accessibility:</strong> Rural, urban, suburban equally powerful</li>
+                        <li><strong>Schedule flexibility:</strong> Participate anytime, anywhere safely</li>
+                        <li><strong>Safety-first:</strong> No physical exposure during dangerous tensions</li>
+                        <li><strong>Permanent documentation:</strong> Congressional responses recorded for accountability</li>
+                    </ul>
+                </div>
+                <p style="margin-top: 15px;"><strong>175 million Americans coordinating virtually = more powerful than physical demonstrations with maximum safety.</strong></p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="question">Q: How does PHIERS address 27% tariff inflation crushing family budgets?</div>
+            <div class="answer">
+                <p><strong>Cooperative economics beats economic warfare through direct alternatives.</strong></p>
+                <div class="crisis-highlight">
+                    <strong>Economic Warfare Damage:</strong>
+                    <ul style="margin: 0; padding-left: 20px;">
+                        <li>Tariffs increased from 2.5% to 27% = $1,300+ annual family tax increase</li>
+                        <li>BRICS retaliation isolating America from 66% of world population</li>
+                        <li>Supply chain disruption creating artificial scarcity while corporations profit</li>
+                    </ul>
+                </div>
+                <div class="highlight">
+                    <strong>PHIERS Economic Defense:</strong>
+                    <ul style="margin: 15px 0 0 20px;">
+                        <li><strong>Cuban Cost Plus:</strong> 80-90% prescription savings beat any tariff inflation</li>
+                        <li><strong>Direct manufacturer relationships:</strong> Bypass middleman extraction and tariff manipulation</li>
+                        <li><strong>Cooperative supply chains:</strong> International cooperation provides tariff-resistant sourcing</li>
+                        <li><strong>Collective purchasing:</strong> 175M Americans = purchasing power exceeding most national economies</li>
+                    </ul>
+                </div>
+                <p style="margin-top: 15px;"><strong>Cooperative economics provides immediate family relief while building systematic alternatives to economic warfare.</strong></p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="question">Q: Congress has constitutional power to stop all crises - why won't they act?</div>
+            <div class="answer">
+                <p><strong>Representatives serve corporate donors instead of constituents because they face ZERO economic consequences.</strong></p>
+                <div class="crisis-highlight">
+                    <strong>Constitutional Authority They Refuse to Use:</strong>
+                    <ul style="margin: 0; padding-left: 20px;">
+                        <li><strong>ICE raids:</strong> Congress controls enforcement funding and scope requirements</li>
+                        <li><strong>Election rigging:</strong> Federal compliance leverage over states receiving federal funding</li>
+                        <li><strong>Economic warfare:</strong> Trade policy authority and federal purchasing power</li>
+                        <li><strong>Government shutdown:</strong> Budget priorities and alternative funding through cooperative savings</li>
+                    </ul>
+                </div>
+                <div class="highlight">
+                    <strong>Why PHIERS Changes This:</strong>
+                    <ul style="margin: 15px 0 0 20px;">
+                        <li><strong>$1.95+ billion per district leverage:</strong> Makes serving donors expensive</li>
+                        <li><strong>Primary challenge funding:</strong> Coalition savings support candidates serving constituents</li>
+                        <li><strong>Recall/replacement power:</strong> Economic backing for special elections</li>
+                        <li><strong>Mathematical superiority:</strong> 230:1 advantage over corporate lobbying minimum</li>
+                    </ul>
+                </div>
+                <p style="margin-top: 15px;"><strong>When ignoring constituents becomes more expensive than serving them, representatives suddenly discover their constitutional authority.</strong></p>
+            </div>
+        </div>
+
+        <!-- DEEP DIVE TOGGLE BUTTON -->
+        <button class="deep-dive-toggle" onclick="toggleDeepDive()">📚 Deep Dive: More Detailed Questions</button>
+
+        <div id="deepDiveSection" style="display:none;">
+        <h2 class="section-title">Healthcare: Comprehensive Questions</h2>
+
+        <div class="faq-item">
+            <div class="question">Q: How does $600/year telehealth actually work? What am I getting?</div>
+            <div class="answer">
+                <p>PHIERS replaces expensive traditional insurance with efficient telehealth delivery for 80% of healthcare needs (everything that doesn't require hospitalization).</p>
+                <div class="highlight">
+                    <strong>What's Included:</strong>
+                    <ul>
+                        <li><strong>Unlimited telehealth consultations:</strong> Talk to doctors anytime via phone/video</li>
+                        <li><strong>Prescription access:</strong> 80-90% savings through Cuban Cost Plus model (operational now)</li>
+                        <li><strong>Preventive care coordination:</strong> Guidance on staying healthy</li>
+                        <li><strong>Chronic disease management:</strong> Support managing ongoing conditions</li>
+                        <li><strong>Mental health support:</strong> Access to counseling and psychiatric care</li>
+                        <li><strong>Emergency referrals:</strong> When hospitalization needed, we coordinate + pay</li>
+                        <li><strong>Vaccine access:</strong> All recommended vaccines included</li>
+                        <li><strong>Lab work coordination:</strong> Testing arranged and interpreted</li>
+                    </ul>
+                </div>
+                <p><strong>NOT Included:</strong> Surgery, hospitalization, emergency room (those use traditional insurance/Medicare when needed). But 80% of healthcare doesn't need those.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="question">Q: Isn't telehealth inferior to in-person medicine?</div>
+            <div class="answer">
+                <p><strong>No. Research shows telehealth is superior for most healthcare:</strong></p>
+                <div class="highlight">
+                    <ul>
+                        <li><strong>Reduces unnecessary ER visits:</strong> 40% fewer emergency room trips (people get medical advice instead of waiting in pain)</li>
+                        <li><strong>Improves preventive care:</strong> More consistent follow-up = earlier intervention</li>
+                        <li><strong>Better medication compliance:</strong> Easier access to refills and guidance</li>
+                        <li><strong>Reduces healthcare costs:</strong> Prevents expensive complications through early treatment</li>
+                        <li><strong>Increases healthcare access:</strong> Rural areas, disabled people, busy families get care they couldn't afford before</li>
+                    </ul>
+                </div>
+                <p>Cuban Cost Plus proves this - 7M people choosing it over traditional insurance. ZORTT Elite Medical operational 2+ years with better outcomes than traditional employer insurance.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="question">Q: What about specialty care? Do I see a cardiologist or dermatologist?</div>
+            <div class="answer">
+                <p>Yes, PHIERS coordinates specialty care when needed.</p>
+                <div class="highlight">
+                    <strong>How it works:</strong>
+                    <ul>
+                        <li>Telehealth doctor evaluates your condition</li>
+                        <li>If specialty needed, they refer + coordinate</li>
+                        <li>We facilitate access to specialists (may be telehealth or in-person depending on condition)</li>
+                        <li>For complex cases, PHIERS covers costs from our savings pool</li>
+                    </ul>
+                </div>
+                <p>The difference: Instead of fighting insurance companies for approval, PHIERS proactively gets you care. We're incentivized to keep you healthy, not deny claims.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="question">Q: What if I have a serious condition like cancer or heart disease?</div>
+            <div class="answer">
+                <p><strong>PHIERS covers everything medically necessary:</strong></p>
+                <div class="highlight">
+                    <ul>
+                        <li>Oncology coordination for cancer treatment</li>
+                        <li>Cardiology coordination for heart disease</li>
+                        <li>Hospital stays when necessary (we pay)</li>
+                        <li>Surgery coordination</li>
+                        <li>Rehabilitation and follow-up care</li>
+                    </ul>
+                </div>
+                <p>PHIERS profit model is completely different from insurance companies. Insurance companies profit by DENYING care. PHIERS profits by KEEPING YOU HEALTHY. We save money through prevention, not by refusing treatment.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="question">Q: How is this different from current insurance?</div>
+            <div class="answer">
+                <div class="highlight">
+                    <strong>Current Insurance Model (Adversarial):</strong>
+                    <ul>
+                        <li>Profit by denying claims</li>
+                        <li>Expensive premiums + high deductibles = people skip care</li>
+                        <li>Administrative overhead = 30% of costs</li>
+                        <li>Network restrictions = limited access</li>
+                        <li>Prior approval delays = delayed treatment</li>
+                    </ul>
+                </div>
+                <div class="highlight">
+                    <strong>PHIERS Model (Aligned):</strong>
+                    <ul>
+                        <li>Profit by keeping you healthy</li>
+                        <li>$600/year = accessible to everyone</li>
+                        <li>Direct delivery = 90% of costs go to care</li>
+                        <li>Nationwide network + telehealth = unlimited access</li>
+                        <li>Immediate care = treatment without bureaucracy</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- ECONOMIC DEEP DIVE -->
+        <h2 class="section-title">Economics: How The Math Works</h2>
+
+        <div class="faq-item">
+            <div class="question">Q: $2.73 trillion in savings seems impossible. Break down the math exactly.</div>
+            <div class="answer">
+                <div class="number-box">
+                    <strong>U.S. Healthcare Spending (Annual):</strong><br>
+                    Government (Medicare/Medicaid): $1.8 trillion<br>
+                    Private insurance: $1.6 trillion<br>
+                    Total: $3.4 trillion<br>
+                    <br>
+                    <strong>Current waste (documented):</strong><br>
+                    Insurance company profits: $800B<br>
+                    Administrative overhead: $500B<br>
+                    Unnecessary ER visits: $200B<br>
+                    Drug overpricing: $300B<br>
+                    Fraud/inefficiency: $100B<br>
+                    <strong>Total waste: $1.9 trillion</strong><br>
+                    <br>
+                    <strong>PHIERS replaces waste with efficiency:</strong><br>
+                    Remove insurance profits: +$800B<br>
+                    Eliminate admin overhead: +$500B<br>
+                    Prevent unnecessary ER (telehealth access): +$200B<br>
+                    Reduce drug costs (Cuban model): +$300B<br>
+                    Reduce inefficiency: +$100B<br>
+                    <strong>Total savings: $1.9 trillion</strong><br>
+                    <br>
+                    Conservative estimate accounts for increased utilization (people getting care they previously skipped): $2.73T realistic projection
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="question">Q: If we save $2.73 trillion, what happens to that money?</div>
+            <div class="answer">
+                <div class="highlight">
+                    <strong>Three-way allocation of savings:</strong>
+                    <ul>
+                        <li><strong>Individual UBI: $500+/month per person</strong><br>
+                        100M people × $6K/year = $600B/year<br>
+                        Reduces poverty, increases consumer spending</li>
+                        <li><strong>Jobs creation: 2M+ positions at $40-70K</strong><br>
+                        2M positions × $50K avg = $100B/year payroll<br>
+                        Case managers, coordinators, community health workers</li>
+                        <li><strong>Government/reinvestment: $1.3T+</strong><br>
+                        Infrastructure, education, research, technology</li>
+                    </ul>
+                </div>
+                <p><strong>Economic stimulus effect:</strong> $2.73T flowing into consumer spending, wages, and infrastructure = 5-10x multiplier effect. GDP grows significantly.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="question">Q: Why do pharmaceutical companies accept 80-90% price cuts?</div>
+            <div class="answer">
+                <div class="highlight">
+                    <strong>Cuban Cost Plus model proves it works:</strong>
+                    <ul>
+                        <li><strong>Manufacturer provides drugs at 15% markup</strong> (not 300-400% markup)</li>
+                        <li><strong>7 million customers pay 80-90% less</strong> (proven by 200+ pharmacies operational)</li>
+                        <li><strong>Manufacturers still profit</strong> (volume at lower margin > volume at high margin with half the customers)</li>
+                        <li><strong>Everyone wins except insurance middlemen</strong> (who were extracting $400B in profit)</li>
+                    </ul>
+                </div>
+                <p>Pharma doesn't care about insurance company profits. They care about their own profit. Lower price × 3x volume = better business outcome.</p>
+            </div>
+        </div>
+
+        <!-- OPERATIONAL VALIDATION -->
+        <h2 class="section-title">Validation: Why This Actually Works</h2>
+
+        <div class="faq-item">
+            <div class="question">Q: You keep mentioning Cuban Cost Plus and ZORTT. What exactly are they doing?</div>
+            <div class="answer">
+                <div class="highlight">
+                    <strong>Mark Cuban's Cost Plus Drugs (Live Now):</strong>
+                    <ul>
+                        <li><strong>Founded:</strong> 2022</li>
+                        <li><strong>Current operation:</strong> 200+ pharmacies across USA</li>
+                        <li><strong>Customers served:</strong> 7 million people</li>
+                        <li><strong>Average savings:</strong> 80-90% on prescriptions</li>
+                        <li><strong>Model:</strong> Direct manufacturer partnerships, minimal markup</li>
+                        <li><strong>Proof point:</strong> This is exactly the pharmaceutical model PHIERS uses</li>
+                    </ul>
+                </div>
+                <div class="highlight">
+                    <strong>ZORTT Elite Medical (Operational 2+ Years):</strong>
+                    <ul>
+                        <li><strong>Founded:</strong> 2023</li>
+                        <li><strong>Current operation:</strong> Serving union workers, gig workers, veterans</li>
+                        <li><strong>Model:</strong> Cooperative healthcare delivery with telehealth</li>
+                        <li><strong>Results:</strong> Better health outcomes than traditional insurance</li>
+                        <li><strong>Proof point:</strong> This is exactly the delivery model PHIERS uses</li>
+                    </ul>
+                </div>
+                <p><strong>These aren't theories. These are operating companies RIGHT NOW proving the model works.</strong></p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="question">Q: What about the Chenoweth research? How does 3.5% guarantee success?</div>
+            <div class="answer">
+                <div class="highlight">
+                    <strong>Erica Chenoweth's Research (Harvard Kennedy School):</strong>
+                    <ul>
+                        <li><strong>Study period:</strong> 1900-2006 (323 campaigns)</li>
+                        <li><strong>Finding:</strong> "No campaign achieving 3.5% population participation has ever failed"</li>
+                        <li><strong>Mechanism:</strong> 3.5% creates feedback loops that force institutional change</li>
+                        <li><strong>Why it works:</strong> Institutions lose legitimacy when 3.5% actively oppose them</li>
+                    </ul>
+                </div>
+                <div class="number-box">
+                    <strong>Current U.S. Population: 335 million</strong><br>
+                    3.5% threshold: 11.7 million people<br>
+                    PHIERS target: 100 million + people<br>
+                    <strong>Advantage: 8.5x over guaranteed success threshold</strong>
+                </div>
+                <p>This isn't wishful thinking. This is peer-reviewed research from one of America's leading researchers.</p>
+            </div>
+        </div>
+
+        <!-- CONGRESSIONAL -->
+        <h2 class="section-title">Congressional & Political Questions</h2>
+
+        <div class="faq-item">
+            <div class="question">Q: If this is so great, why hasn't Congress passed it already?</div>
+            <div class="answer">
+                <div class="crisis-box">
+                    <strong>Why Congress refuses PHIERS:</strong>
+                    <ul>
+                        <li><strong>Pharmaceutical lobbying:</strong> $3.7B spent preventing drug price regulation</li>
+                        <li><strong>Insurance industry lobbying:</strong> $600M+ spent defending profit model</li>
+                        <li><strong>Political capture:</strong> Healthcare executives donate to both parties</li>
+                        <li><strong>Campaign funding:</strong> Representatives depend on healthcare industry donations</li>
+                    </ul>
+                </div>
+                <p><strong>Congress isn't rejecting PHIERS because it doesn't work. Congress is rejecting it because it threatens $2B+ in annual political donations.</strong></p>
+                <p>PHIERS only passes when constituent pressure (VHIERSMovement petition + survey) makes serving healthcare donors more expensive than serving constituents.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="question">Q: How does the petition/survey actually force Congressional action?</div>
+            <div class="answer">
+                <div class="highlight">
+                    <strong>Petition Power (Nader Rule):</strong>
+                    <ul>
+                        <li><strong>1,500 signatures from a district = mandatory town hall</strong></li>
+                        <li>Representatives must face constituents publicly</li>
+                        <li>Refusing to discuss losing support = political suicide</li>
+                        <li>PHIERS targeting 10,000+ per district = overwhelming pressure</li>
+                    </ul>
+                </div>
+                <div class="highlight">
+                    <strong>Survey Power (Accountability):</strong>
+                    <ul>
+                        <li><strong>Tracks representative responses documented publicly</strong></li>
+                        <li>Did they support PHIERS or corporate donors?</li>
+                        <li>Results published in local media</li>
+                        <li>Primary challengers use data: "Your rep sided with pharma over you"</li>
+                    </ul>
+                </div>
+                <p><strong>Mathematical reality:</strong> $1.95B per district constituent power vs. $8.5M corporate lobbying per district = 230:1 advantage. Congress cannot ignore that math.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="question">Q: Couldn't Congress just ignore the petition like they ignore protests?</div>
+            <div class="answer">
+                <p><strong>No. Here's why PHIERS is different:</strong></p>
+                <div class="highlight">
+                    <ul>
+                        <li><strong>Protests = moral pressure (ignored)</strong><br>
+                        300+ climate protests = no legislation<br>
+                        Reason: No economic consequences</li>
+                        <li><strong>Petitions + survey + primary challenges = economic pressure (cannot ignore)</strong><br>
+                        PHIERS = documented constituent demand + electoral threat<br>
+                        Reason: Violating it costs election</li>
+                    </ul>
+                </div>
+                <p>Every successful movement in history (labor, civil rights, women's suffrage) ultimately won through economic pressure. PHIERS uses proven mechanisms at unprecedented scale.</p>
+            </div>
+        </div>
+
+        </div>
+
+        <div style="text-align: center; margin-top: 50px;">
+            <a href="/" class="back-button">← Back to Main Site</a>
         </div>
     </div>
-    
-    <div style="background: linear-gradient(135deg, #dcfce7 0%, #bbf7d0 100%); padding: 60px 30px; text-align: center;">
-        <div class="container">
-            <h2>Ready to Learn More?</h2>
-            <a href="https://phiers.org" class="btn">Visit PHIERS.org</a>
-        </div>
-    </div>
-    
-    <div class="footer">
-        <div style="margin-bottom: 20px;">
-            <a href="https://phiers.org">PHIERS.org</a>
-            <a href="https://www.gofundme.com/f/homeless-but-hopeful-affordable-healthcare-good-jobs-ubi">Fund the Story</a>
-            <a href="https://docs.google.com/document/d/1EWz90b6WPqusRfSChuk_IL4h_4TJJd9R/edit?usp=sharing">Download Ebook</a>
-            <a href="https://discord.gg/narhDKJY">Discord</a>
-            <a href="https://www.linkedin.com/in/will-price-5801434/">LinkedIn</a>
-        </div>
-        <p style="font-size: 0.8em; color: #9ca3af; margin-top: 15px;">© 2025 PHIERS Movement | All Rights Reserved | Original Framework © 2014</p>
-    </div>
+
+    <script>
+        function toggleDeepDive() {
+            const deepDiveSection = document.getElementById('deepDiveSection');
+            const toggleButton = document.querySelector('.deep-dive-toggle');
+            
+            if (deepDiveSection.style.display === 'none') {
+                deepDiveSection.style.display = 'block';
+                toggleButton.textContent = '📚 Hide Deep Dive Questions';
+                toggleButton.style.background = '#16a34a';
+            } else {
+                deepDiveSection.style.display = 'none';
+                toggleButton.textContent = '📚 Deep Dive: More Detailed Questions';
+                toggleButton.style.background = '#667eea';
+            }
+        }
+    </script>
 </body>
 </html>
