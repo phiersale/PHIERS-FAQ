@@ -105,6 +105,22 @@
         }
         ul, ol { margin: 15px 0 15px 25px; }
         li { margin-bottom: 12px; line-height: 1.7; }
+        .faq-item.collapsed .answer {
+            display: none;
+        }
+        .question {
+            cursor: pointer;
+            user-select: none;
+        }
+        .question::after {
+            content: " ▼";
+            float: right;
+            transition: transform 0.3s ease;
+            font-size: 0.9em;
+        }
+        .faq-item.collapsed .question::after {
+            transform: rotate(-90deg);
+        }
         .back-button {
             display: block;
             margin: 40px auto 0;
@@ -153,8 +169,8 @@
         </div>
 
         <div style="background: #ecf0f1; padding: 12px; border-radius: 8px; text-align: center; margin-bottom: 20px; color: #2c3e50; font-weight: bold; font-size: 0.95em;">
-            <strong>⏱️ UPDATED: December 29, 2025, 10:56 AM PST</strong>
-            <div style="font-size: 0.85em; font-weight: normal; margin-top: 5px; color: #555;">Added 6 critical crisis questions + comprehensive deep dive</div>
+            <strong>⏱️ UPDATED: <span id="timestamp">December 29, 2025, 10:56 AM PST</span></strong>
+            <div style="font-size: 0.85em; font-weight: normal; margin-top: 5px; color: #555;" id="updateNote">Added 6 critical crisis questions + comprehensive deep dive</div>
         </div>
 
         <div class="header">
@@ -875,6 +891,25 @@
                 toggleButton.style.background = '#667eea';
             }
         }
+
+        // Update timestamp when changes are made
+        // To update: call updateFAQTimestamp("December 29, 2025, 11:30 AM PST", "Added 3 new questions about market dominance")
+        function updateFAQTimestamp(newTime, updateNote) {
+            document.getElementById('timestamp').textContent = newTime;
+            document.getElementById('updateNote').textContent = updateNote;
+        }
+
+        // Accordion functionality for FAQ items
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.question');
+                question.addEventListener('click', function() {
+                    item.classList.toggle('collapsed');
+                });
+            });
+        });
     </script>
 </body>
 </html>
