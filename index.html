@@ -22,6 +22,7 @@
             align-items: center;
             justify-content: space-between;
             gap: 15px;
+            position: relative;
         }
         
         .crisis-alert-content {
@@ -95,29 +96,29 @@
             line-height: 1.9;
         }
         .highlight {
-            background: #e8f5e8;
+            background: #c8e6c9;
             border-left: 4px solid #16a34a;
             padding: 18px;
             margin: 18px 0;
             border-radius: 6px;
-            color: #1a1a1a;
+            color: #000;
         }
         .crisis-box {
-            background: #fff3cd;
+            background: #ffeaa7;
             border-left: 4px solid #ffc107;
             padding: 18px;
             margin: 18px 0;
             border-radius: 6px;
-            color: #1a1a1a;
+            color: #000;
         }
         .number-box {
-            background: #d1ecf1;
+            background: #a8d8ea;
             border-left: 4px solid #17a2b8;
             padding: 18px;
             margin: 18px 0;
             border-radius: 6px;
             font-weight: bold;
-            color: #1a1a1a;
+            color: #000;
         }
         .crisis-alert {
             background: linear-gradient(45deg, #e74c3c, #c0392b);
@@ -134,12 +135,12 @@
             50% { opacity: 0.95; }
         }
         .crisis-highlight {
-            background: #fff3cd;
+            background: #ffeaa7;
             border-left: 4px solid #ffc107;
             padding: 18px;
             margin: 18px 0;
             border-radius: 6px;
-            color: #1a1a1a;
+            color: #000;
         }
         ul, ol { margin: 15px 0 15px 25px; }
         li { margin-bottom: 12px; line-height: 1.7; }
@@ -209,23 +210,20 @@
     </style>
 </head>
 <body>
-    <div class="crisis-alert">
+    <div class="crisis-alert" id="crisisAlert">
         <div class="crisis-alert-content">
-            ⏰ <strong>3 DAYS UNTIL HEALTH INSURANCE CATASTROPHE</strong> ⏰<br/>
-            22 MILLION AMERICANS LOSE COVERAGE DEC 31 WITHOUT PHIERS<br/>
-            <a href="https://docs.google.com/forms/d/1MYeQcmw8ZDXHwcjpEw5hbQCWP4FdHdyoHTo1XcAiTRA/edit" target="_blank">✍️ SIGN PETITION NOW</a> | 
-            <a href="tel:202-224-3121">📞 CALL YOUR CONGRESSMAN</a> |
-            <a href="https://discord.gg/narhDKJY" target="_blank">💬 JOIN THE MOVEMENT</a>
+            🚨 <strong>CRISIS CONVERGENCE: Political Violence + Authoritarianism + Economic Warfare + Election Rigging + Government Shutdown</strong> 🚨
         </div>
+        <button onclick="document.getElementById('crisisAlert').style.display='none';" style="position: absolute; top: 10px; right: 10px; background: none; border: none; font-size: 1.5em; cursor: pointer; color: white; padding: 0; width: 30px; height: 30px;">×</button>
     </div>
 
     <div class="container">
-        <header>
+        <header style="text-align: center;">
             <img src="https://raw.githubusercontent.com/phiersale/PHIERS-Concept/main/PHIERS_Logo.png" 
                  alt="PHIERS Logo" 
                  class="logo" style="max-width: 150px; margin: 0 auto 15px auto; display: block;">
-            <p style="font-size: 1.5em; color: #4caf50; margin-bottom: 10px; font-weight: bold; text-shadow: 0 0 20px rgba(76, 175, 80, 0.3);">MABAH Movement</p>
-            <p style="font-size: 1.1em; color: #81c784; margin-bottom: 25px;">Making America Better And Healthier</p>
+            <p style="font-size: 1.5em; color: #4caf50; margin-bottom: 10px; font-weight: bold; text-shadow: 0 0 20px rgba(76, 175, 80, 0.3); text-align: center;">MABAH Movement</p>
+            <p style="font-size: 1.1em; color: #81c784; margin-bottom: 25px; text-align: center;">Making America Better And Healthier</p>
         </header>
         
         <div class="nav-menu" style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; margin-bottom: 30px;">
@@ -237,16 +235,18 @@
             <div style="text-decoration: none; color: #e74c3c; padding: 8px 12px; background: rgba(231, 76, 60, 0.2); border-radius: 4px; font-weight: bold;">▼ FAQ 🔥 <span style="background: #e74c3c; color: white; padding: 2px 6px; border-radius: 3px; font-size: 0.8em; font-weight: bold; margin-left: 5px;">UPDATED</span></div>
             <a href="https://phiers.org/#resources" style="text-decoration: none; color: #81c784; padding: 8px 12px; background: rgba(76, 175, 80, 0.1); border-radius: 4px; font-weight: bold;">▶ Learn More</a>
         </div>
-        <div class="crisis-alert">
+        <div class="crisis-alert" id="crisisAlert" style="position: relative;">
             🚨 CRISIS CONVERGENCE: Political Violence + Authoritarianism + Economic Warfare + Election Rigging + Government Shutdown 🚨
+            <button onclick="document.getElementById('crisisAlert').style.display='none';" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: none; border: none; font-size: 1.5em; cursor: pointer; color: white;">&times;</button>
         </div>
 
-        <div style="background: #ecf0f1; padding: 12px; border-radius: 8px; text-align: center; margin-bottom: 20px; color: #2c3e50; font-weight: bold; font-size: 0.95em;">
+        <div style="background: #ecf0f1; padding: 12px; border-radius: 8px; text-align: center; margin-bottom: 20px; color: #2c3e50; font-weight: bold; font-size: 0.95em; position: relative;" id="updatedSection">
+            <button onclick="document.getElementById('updatedSection').style.display='none';" style="position: absolute; top: 10px; right: 10px; background: none; border: none; font-size: 1.2em; cursor: pointer; color: #2c3e50;">&times;</button>
             <strong>UPDATED: December 30, 2025, 12:15 AM UTC</strong>
             <div style="font-size: 0.85em; font-weight: normal; margin-top: 5px; color: #555;">Fixed FAQ container structure, improved question visibility, added closeable important note</div>
         </div>
 
-        <div style="background: #fff3cd; border-left: 4px solid #ffc107; padding: 15px; border-radius: 8px; margin-bottom: 20px; color: #000; position: relative;" id="importantNote">
+        <div style="background: #ffeaa7; border-left: 4px solid #ffc107; padding: 15px; border-radius: 8px; margin-bottom: 20px; color: #000; position: relative;" id="importantNote">
             <button onclick="document.getElementById('importantNote').style.display='none';" style="position: absolute; top: 10px; right: 10px; background: none; border: none; font-size: 1.2em; cursor: pointer; color: #000;">&times;</button>
             <strong>IMPORTANT NOTE:</strong> Since we're evolving as the threats evolve, some answers may change with time. <strong>CHECK BACK OFTEN</strong> to see what's been improved. If your concerns are not addressed, or if you have additional questions or concerns, please let us know. Updated answers are marked with UPDATED flags. This way, we become a dynamic partner with YOU in building something better together.
         </div>
