@@ -84,6 +84,7 @@
             margin-bottom: 35px;
             border-left: 5px solid #4caf50;
             padding-left: 25px;
+            text-align: left;
         }
         .question {
             font-weight: bold;
@@ -228,6 +229,7 @@
         
         <div class="nav-menu" style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; margin-bottom: 30px;">
             <a href="https://phiers.org/" style="text-decoration: none; color: #81c784; padding: 8px 12px; background: rgba(76, 175, 80, 0.1); border-radius: 4px; font-weight: bold;">▶ Main</a>
+            <a href="https://phiers.org/#rubiks" style="text-decoration: none; color: #81c784; padding: 8px 12px; background: rgba(76, 175, 80, 0.1); border-radius: 4px; font-weight: bold;">▶ 5D Solutions</a>
             <a href="https://phiers.org/#crisis" style="text-decoration: none; color: #81c784; padding: 8px 12px; background: rgba(76, 175, 80, 0.1); border-radius: 4px; font-weight: bold;">▶ The Crisis</a>
             <a href="https://phiers.org/#works" style="text-decoration: none; color: #81c784; padding: 8px 12px; background: rgba(76, 175, 80, 0.1); border-radius: 4px; font-weight: bold;">▶ How It Works</a>
             <a href="https://phiers.org/#leverage" style="text-decoration: none; color: #81c784; padding: 8px 12px; background: rgba(76, 175, 80, 0.1); border-radius: 4px; font-weight: bold;">▶ Leverage</a>
@@ -403,7 +405,15 @@
                     <li>Case managers helping people navigate healthcare</li>
                     <li>Health coordinators connecting patients with services</li>
                     <li>Community health workers preventing crises</li>
-                    <li>Logistics coordinators managing supply chains</li>
+                    <li>Mental health counselors and therapists</li>
+                    <li>Pharmacists and pharmacy technicians</li>
+                    <li>Primary care and urgent care workers</li>
+                    <li>Medical transportation and logistics coordinators</li>
+                    <li>Child and adult day care workers</li>
+                    <li>Community organizers and mobilizers</li>
+                    <li>Gig workers for deliveries and services</li>
+                    <li>Community gardening and environmental cleanup crews</li>
+                    <li>Skilled trades workers: repair, maintenance, construction</li>
                     <li>Training coordinators teaching communities about health</li>
                 </ul>
                 <p style="margin-top: 15px;"><strong>Why AI-resistant?</strong> These require human judgment, empathy, and trust that AI cannot replicate.</p>
@@ -510,6 +520,14 @@
             </div>
         </div>
 
+        <!-- EXTENDED/DEEP DIVE QUESTIONS SECTION -->
+        <div style="margin-top: 40px; padding-top: 30px; border-top: 3px solid #4caf50;">
+            <div style="text-align: center; margin-bottom: 30px;">
+                <button class="btn btn-primary" onclick="document.getElementById('extendedFAQ').style.display = document.getElementById('extendedFAQ').style.display === 'none' ? 'block' : 'none';" style="background: #16a34a; font-size: 1.05em; padding: 12px 25px;">📚 Extended FAQ - More Detailed Questions</button>
+            </div>
+
+            <div id="extendedFAQ" style="display: none; margin-top: 25px;">
+        
         <div class="faq-item collapsed">
             <div class="question">Q: Is my data / info / payment safe?</div>
             <div class="answer">
@@ -1015,6 +1033,9 @@
                     </ul>
                 </div>
                 <p>Every successful movement in history (labor, civil rights, women's suffrage) ultimately won through economic pressure. PHIERS uses proven mechanisms at unprecedented scale.</p>
+            </div>
+        </div>
+
             </div>
         </div>
 
